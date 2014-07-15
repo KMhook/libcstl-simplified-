@@ -36,6 +36,9 @@ cstlinclude_HEADERS = \
             cstl_hash_map.h \
             cstl_hash_map_iterator.h \
             cstl_hash_map_private.h \
+            cstl_hash_multimap.h \
+            cstl_hash_multimap_iterator.h \
+            cstl_hash_multimap_private.h \
             cstl_hash_multiset.h \
             cstl_hash_multiset_iterator.h \
             cstl_hash_multiset_private.h \

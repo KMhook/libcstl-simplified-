@@ -92,6 +92,14 @@ am_libcstl_la_OBJECTS = libcstl_la-cstl_algo_nonmutating.lo \
 	libcstl_la-cstl_hash_map_iterator.lo \
 	libcstl_la-cstl_hash_map_private.lo \
 	libcstl_la-cstl_hash_map_aux.lo \
+	libcstl_la-cstl_hash_multimap.lo \
+	libcstl_la-cstl_hash_multimap_iterator.lo \
+	libcstl_la-cstl_hash_multimap_private.lo \
+	libcstl_la-cstl_hash_multimap_aux.lo \
+	libcstl_la-cstl_hash_multiset.lo \
+	libcstl_la-cstl_hash_multiset_iterator.lo \
+	libcstl_la-cstl_hash_multiset_private.lo \
+	libcstl_la-cstl_hash_multiset_aux.lo \
 	libcstl_la-cstl_hash_set.lo \
 	libcstl_la-cstl_hash_set_iterator.lo \
 	libcstl_la-cstl_hash_set_private.lo \
@@ -105,7 +113,13 @@ am_libcstl_la_OBJECTS = libcstl_la-cstl_algo_nonmutating.lo \
 	libcstl_la-cstl_list_private.lo libcstl_la-cstl_list_aux.lo \
 	libcstl_la-cstl_map.lo libcstl_la-cstl_map_iterator.lo \
 	libcstl_la-cstl_map_private.lo libcstl_la-cstl_map_aux.lo \
-	libcstl_la-cstl_numeric.lo \
+	libcstl_la-cstl_multimap.lo \
+	libcstl_la-cstl_multimap_iterator.lo \
+	libcstl_la-cstl_multimap_private.lo \
+	libcstl_la-cstl_multimap_aux.lo libcstl_la-cstl_multiset.lo \
+	libcstl_la-cstl_multiset_iterator.lo \
+	libcstl_la-cstl_multiset_private.lo \
+	libcstl_la-cstl_multiset_aux.lo libcstl_la-cstl_numeric.lo \
 	libcstl_la-cstl_numeric_private.lo libcstl_la-cstl_pair.lo \
 	libcstl_la-cstl_pair_private.lo libcstl_la-cstl_pair_aux.lo \
 	libcstl_la-cstl_priority_queue.lo \
@@ -271,12 +285,16 @@ libcstl_la_SOURCES = \
              cstl_deque.c cstl_deque_iterator.c cstl_deque_private.c cstl_deque_aux.c cstl_deque_aux.h \
              cstl_function.c cstl_function_private.c \
              cstl_hash_map.c cstl_hash_map_iterator.c cstl_hash_map_private.c cstl_hash_map_aux.c cstl_hash_map_aux.h \
+             cstl_hash_multimap.c cstl_hash_multimap_iterator.c cstl_hash_multimap_private.c cstl_hash_multimap_aux.c cstl_hash_multimap_aux.h \
+             cstl_hash_multiset.c cstl_hash_multiset_iterator.c cstl_hash_multiset_private.c cstl_hash_multiset_aux.c cstl_hash_multiset_aux.h \
              cstl_hash_set.c cstl_hash_set_iterator.c cstl_hash_set_private.c cstl_hash_set_aux.c cstl_hash_set_aux.h \
              cstl_hashtable.c cstl_hashtable_iterator.c cstl_hashtable_private.c cstl_hashtable_aux.c cstl_hashtable_aux.h \
              cstl_heap.c cstl_heap_aux.c cstl_heap_aux.h \
              cstl_iterator.c cstl_iterator_private.c \
              cstl_list.c cstl_list_iterator.c cstl_list_private.c cstl_list_aux.c cstl_list_aux.h \
              cstl_map.c cstl_map_iterator.c cstl_map_private.c cstl_map_aux.c cstl_map_aux.h \
+             cstl_multimap.c cstl_multimap_iterator.c cstl_multimap_private.c cstl_multimap_aux.c cstl_multimap_aux.h \
+             cstl_multiset.c cstl_multiset_iterator.c cstl_multiset_private.c cstl_multiset_aux.c cstl_multiset_aux.h \
              cstl_numeric.c cstl_numeric_private.c \
              cstl_pair.c cstl_pair_private.c cstl_pair_aux.c cstl_pair_aux.h \
              cstl_priority_queue.c cstl_priority_queue_private.c \
@@ -393,6 +411,14 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_hash_map_aux.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_hash_map_iterator.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_hash_map_private.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_hash_multimap.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_hash_multimap_aux.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_hash_multimap_iterator.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_hash_multimap_private.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_hash_multiset.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_hash_multiset_aux.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_hash_multiset_iterator.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_hash_multiset_private.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_hash_set.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_hash_set_aux.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_hash_set_iterator.Plo@am__quote@
@@ -413,6 +439,14 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_map_aux.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_map_iterator.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_map_private.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_multimap.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_multimap_aux.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_multimap_iterator.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_multimap_private.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_multiset.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_multiset_aux.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_multiset_iterator.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_multiset_private.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_numeric.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_numeric_private.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libcstl_la-cstl_pair.Plo@am__quote@
@@ -664,6 +698,61 @@ libcstl_la-cstl_hash_map_aux.lo: cstl_hash_map_aux.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_hash_map_aux.lo `test -f 'cstl_hash_map_aux.c' || echo '$(srcdir)/'`cstl_hash_map_aux.c
 
+libcstl_la-cstl_hash_multimap.lo: cstl_hash_multimap.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_hash_multimap.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_hash_multimap.Tpo -c -o libcstl_la-cstl_hash_multimap.lo `test -f 'cstl_hash_multimap.c' || echo '$(srcdir)/'`cstl_hash_multimap.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_hash_multimap.Tpo $(DEPDIR)/libcstl_la-cstl_hash_multimap.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_hash_multimap.c' object='libcstl_la-cstl_hash_multimap.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_hash_multimap.lo `test -f 'cstl_hash_multimap.c' || echo '$(srcdir)/'`cstl_hash_multimap.c
+
+libcstl_la-cstl_hash_multimap_iterator.lo: cstl_hash_multimap_iterator.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_hash_multimap_iterator.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_hash_multimap_iterator.Tpo -c -o libcstl_la-cstl_hash_multimap_iterator.lo `test -f 'cstl_hash_multimap_iterator.c' || echo '$(srcdir)/'`cstl_hash_multimap_iterator.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_hash_multimap_iterator.Tpo $(DEPDIR)/libcstl_la-cstl_hash_multimap_iterator.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_hash_multimap_iterator.c' object='libcstl_la-cstl_hash_multimap_iterator.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_hash_multimap_iterator.lo `test -f 'cstl_hash_multimap_iterator.c' || echo '$(srcdir)/'`cstl_hash_multimap_iterator.c
+
+libcstl_la-cstl_hash_multimap_private.lo: cstl_hash_multimap_private.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_hash_multimap_private.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_hash_multimap_private.Tpo -c -o libcstl_la-cstl_hash_multimap_private.lo `test -f 'cstl_hash_multimap_private.c' || echo '$(srcdir)/'`cstl_hash_multimap_private.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_hash_multimap_private.Tpo $(DEPDIR)/libcstl_la-cstl_hash_multimap_private.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_hash_multimap_private.c' object='libcstl_la-cstl_hash_multimap_private.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_hash_multimap_private.lo `test -f 'cstl_hash_multimap_private.c' || echo '$(srcdir)/'`cstl_hash_multimap_private.c
+
+libcstl_la-cstl_hash_multimap_aux.lo: cstl_hash_multimap_aux.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_hash_multimap_aux.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_hash_multimap_aux.Tpo -c -o libcstl_la-cstl_hash_multimap_aux.lo `test -f 'cstl_hash_multimap_aux.c' || echo '$(srcdir)/'`cstl_hash_multimap_aux.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_hash_multimap_aux.Tpo $(DEPDIR)/libcstl_la-cstl_hash_multimap_aux.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_hash_multimap_aux.c' object='libcstl_la-cstl_hash_multimap_aux.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_hash_multimap_aux.lo `test -f 'cstl_hash_multimap_aux.c' || echo '$(srcdir)/'`cstl_hash_multimap_aux.c
+
+libcstl_la-cstl_hash_multiset.lo: cstl_hash_multiset.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_hash_multiset.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_hash_multiset.Tpo -c -o libcstl_la-cstl_hash_multiset.lo `test -f 'cstl_hash_multiset.c' || echo '$(srcdir)/'`cstl_hash_multiset.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_hash_multiset.Tpo $(DEPDIR)/libcstl_la-cstl_hash_multiset.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_hash_multiset.c' object='libcstl_la-cstl_hash_multiset.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_hash_multiset.lo `test -f 'cstl_hash_multiset.c' || echo '$(srcdir)/'`cstl_hash_multiset.c
+
+libcstl_la-cstl_hash_multiset_iterator.lo: cstl_hash_multiset_iterator.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_hash_multiset_iterator.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_hash_multiset_iterator.Tpo -c -o libcstl_la-cstl_hash_multiset_iterator.lo `test -f 'cstl_hash_multiset_iterator.c' || echo '$(srcdir)/'`cstl_hash_multiset_iterator.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_hash_multiset_iterator.Tpo $(DEPDIR)/libcstl_la-cstl_hash_multiset_iterator.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_hash_multiset_iterator.c' object='libcstl_la-cstl_hash_multiset_iterator.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_hash_multiset_iterator.lo `test -f 'cstl_hash_multiset_iterator.c' || echo '$(srcdir)/'`cstl_hash_multiset_iterator.c
+
+libcstl_la-cstl_hash_multiset_private.lo: cstl_hash_multiset_private.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_hash_multiset_private.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_hash_multiset_private.Tpo -c -o libcstl_la-cstl_hash_multiset_private.lo `test -f 'cstl_hash_multiset_private.c' || echo '$(srcdir)/'`cstl_hash_multiset_private.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_hash_multiset_private.Tpo $(DEPDIR)/libcstl_la-cstl_hash_multiset_private.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_hash_multiset_private.c' object='libcstl_la-cstl_hash_multiset_private.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_hash_multiset_private.lo `test -f 'cstl_hash_multiset_private.c' || echo '$(srcdir)/'`cstl_hash_multiset_private.c
+
+libcstl_la-cstl_hash_multiset_aux.lo: cstl_hash_multiset_aux.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_hash_multiset_aux.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_hash_multiset_aux.Tpo -c -o libcstl_la-cstl_hash_multiset_aux.lo `test -f 'cstl_hash_multiset_aux.c' || echo '$(srcdir)/'`cstl_hash_multiset_aux.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_hash_multiset_aux.Tpo $(DEPDIR)/libcstl_la-cstl_hash_multiset_aux.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_hash_multiset_aux.c' object='libcstl_la-cstl_hash_multiset_aux.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_hash_multiset_aux.lo `test -f 'cstl_hash_multiset_aux.c' || echo '$(srcdir)/'`cstl_hash_multiset_aux.c
 
 libcstl_la-cstl_hash_set.lo: cstl_hash_set.c
 @am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_hash_set.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_hash_set.Tpo -c -o libcstl_la-cstl_hash_set.lo `test -f 'cstl_hash_set.c' || echo '$(srcdir)/'`cstl_hash_set.c
@@ -804,6 +893,62 @@ libcstl_la-cstl_map_aux.lo: cstl_map_aux.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_map_aux.c' object='libcstl_la-cstl_map_aux.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_map_aux.lo `test -f 'cstl_map_aux.c' || echo '$(srcdir)/'`cstl_map_aux.c
+
+libcstl_la-cstl_multimap.lo: cstl_multimap.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_multimap.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_multimap.Tpo -c -o libcstl_la-cstl_multimap.lo `test -f 'cstl_multimap.c' || echo '$(srcdir)/'`cstl_multimap.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_multimap.Tpo $(DEPDIR)/libcstl_la-cstl_multimap.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_multimap.c' object='libcstl_la-cstl_multimap.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_multimap.lo `test -f 'cstl_multimap.c' || echo '$(srcdir)/'`cstl_multimap.c
+
+libcstl_la-cstl_multimap_iterator.lo: cstl_multimap_iterator.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_multimap_iterator.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_multimap_iterator.Tpo -c -o libcstl_la-cstl_multimap_iterator.lo `test -f 'cstl_multimap_iterator.c' || echo '$(srcdir)/'`cstl_multimap_iterator.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_multimap_iterator.Tpo $(DEPDIR)/libcstl_la-cstl_multimap_iterator.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_multimap_iterator.c' object='libcstl_la-cstl_multimap_iterator.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_multimap_iterator.lo `test -f 'cstl_multimap_iterator.c' || echo '$(srcdir)/'`cstl_multimap_iterator.c
+
+libcstl_la-cstl_multimap_private.lo: cstl_multimap_private.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_multimap_private.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_multimap_private.Tpo -c -o libcstl_la-cstl_multimap_private.lo `test -f 'cstl_multimap_private.c' || echo '$(srcdir)/'`cstl_multimap_private.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_multimap_private.Tpo $(DEPDIR)/libcstl_la-cstl_multimap_private.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_multimap_private.c' object='libcstl_la-cstl_multimap_private.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_multimap_private.lo `test -f 'cstl_multimap_private.c' || echo '$(srcdir)/'`cstl_multimap_private.c
+
+libcstl_la-cstl_multimap_aux.lo: cstl_multimap_aux.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_multimap_aux.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_multimap_aux.Tpo -c -o libcstl_la-cstl_multimap_aux.lo `test -f 'cstl_multimap_aux.c' || echo '$(srcdir)/'`cstl_multimap_aux.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_multimap_aux.Tpo $(DEPDIR)/libcstl_la-cstl_multimap_aux.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_multimap_aux.c' object='libcstl_la-cstl_multimap_aux.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_multimap_aux.lo `test -f 'cstl_multimap_aux.c' || echo '$(srcdir)/'`cstl_multimap_aux.c
+
+libcstl_la-cstl_multiset.lo: cstl_multiset.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_multiset.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_multiset.Tpo -c -o libcstl_la-cstl_multiset.lo `test -f 'cstl_multiset.c' || echo '$(srcdir)/'`cstl_multiset.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_multiset.Tpo $(DEPDIR)/libcstl_la-cstl_multiset.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_multiset.c' object='libcstl_la-cstl_multiset.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_multiset.lo `test -f 'cstl_multiset.c' || echo '$(srcdir)/'`cstl_multiset.c
+
+libcstl_la-cstl_multiset_iterator.lo: cstl_multiset_iterator.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_multiset_iterator.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_multiset_iterator.Tpo -c -o libcstl_la-cstl_multiset_iterator.lo `test -f 'cstl_multiset_iterator.c' || echo '$(srcdir)/'`cstl_multiset_iterator.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_multiset_iterator.Tpo $(DEPDIR)/libcstl_la-cstl_multiset_iterator.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_multiset_iterator.c' object='libcstl_la-cstl_multiset_iterator.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_multiset_iterator.lo `test -f 'cstl_multiset_iterator.c' || echo '$(srcdir)/'`cstl_multiset_iterator.c
+
+libcstl_la-cstl_multiset_private.lo: cstl_multiset_private.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_multiset_private.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_multiset_private.Tpo -c -o libcstl_la-cstl_multiset_private.lo `test -f 'cstl_multiset_private.c' || echo '$(srcdir)/'`cstl_multiset_private.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_multiset_private.Tpo $(DEPDIR)/libcstl_la-cstl_multiset_private.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_multiset_private.c' object='libcstl_la-cstl_multiset_private.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_multiset_private.lo `test -f 'cstl_multiset_private.c' || echo '$(srcdir)/'`cstl_multiset_private.c
+
+libcstl_la-cstl_multiset_aux.lo: cstl_multiset_aux.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_multiset_aux.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_multiset_aux.Tpo -c -o libcstl_la-cstl_multiset_aux.lo `test -f 'cstl_multiset_aux.c' || echo '$(srcdir)/'`cstl_multiset_aux.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libcstl_la-cstl_multiset_aux.Tpo $(DEPDIR)/libcstl_la-cstl_multiset_aux.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cstl_multiset_aux.c' object='libcstl_la-cstl_multiset_aux.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_multiset_aux.lo `test -f 'cstl_multiset_aux.c' || echo '$(srcdir)/'`cstl_multiset_aux.c
 
 libcstl_la-cstl_numeric.lo: cstl_numeric.c
 @am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_numeric.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_numeric.Tpo -c -o libcstl_la-cstl_numeric.lo `test -f 'cstl_numeric.c' || echo '$(srcdir)/'`cstl_numeric.c

@@ -39,9 +39,13 @@ extern "C" {
 #include <cstl/cstl_deque_iterator.h>
 #include <cstl/cstl_slist_iterator.h>
 #include <cstl/cstl_set_iterator.h>
+#include <cstl/cstl_multiset_iterator.h>
 #include <cstl/cstl_map_iterator.h>
+#include <cstl/cstl_multimap_iterator.h>
 #include <cstl/cstl_hash_set_iterator.h>
+#include <cstl/cstl_hash_multiset_iterator.h>
 #include <cstl/cstl_hash_map_iterator.h>
+#include <cstl/cstl_hash_multimap_iterator.h>
 #include <cstl/cstl_basic_string_iterator.h>
 #include <cstl/cstl_string_iterator.h>
 

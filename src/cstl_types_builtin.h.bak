@@ -162,18 +162,16 @@ extern void _type_init_map(const void* cpv_input, void* pv_output);
 extern void _type_copy_map(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_less_map(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_destroy_map(const void* cpv_input, void* pv_output);
-/* multiset_t 
+/* multiset_t */
 extern void _type_init_multiset(const void* cpv_input, void* pv_output);
 extern void _type_copy_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_less_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_destroy_multiset(const void* cpv_input, void* pv_output);
-*/
-/* multimap_t 
+/* multimap_t */
 extern void _type_init_multimap(const void* cpv_input, void* pv_output);
 extern void _type_copy_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_less_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_destroy_multimap(const void* cpv_input, void* pv_output);
-*/
 /* hash_set_t */
 extern void _type_init_hash_set(const void* cpv_input, void* pv_output);
 extern void _type_copy_hash_set(const void* cpv_first, const void* cpv_second, void* pv_output);
@@ -184,18 +182,16 @@ extern void _type_init_hash_map(const void* cpv_input, void* pv_output);
 extern void _type_copy_hash_map(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_less_hash_map(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_destroy_hash_map(const void* cpv_input, void* pv_output);
-/* hash_multiset_t 
+/* hash_multiset_t */
 extern void _type_init_hash_multiset(const void* cpv_input, void* pv_output);
 extern void _type_copy_hash_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_less_hash_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_destroy_hash_multiset(const void* cpv_input, void* pv_output);
-*/
-/* hash_multimap_t 
+/* hash_multimap_t */
 extern void _type_init_hash_multimap(const void* cpv_input, void* pv_output);
 extern void _type_copy_hash_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_less_hash_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_destroy_hash_multimap(const void* cpv_input, void* pv_output);
-*/
 /* pair_t */
 extern void _type_init_pair(const void* cpv_input, void* pv_output);
 extern void _type_copy_pair(const void* cpv_first, const void* cpv_second, void* pv_output);

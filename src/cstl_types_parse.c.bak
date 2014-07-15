@@ -63,8 +63,12 @@
 #define _TOKEN_TEXT_PRIORITY_QUEUE                 "priority_queue_t"
 #define _TOKEN_TEXT_SET                            "set_t"
 #define _TOKEN_TEXT_MAP                            "map_t"
+#define _TOKEN_TEXT_MULTISET                       "multiset_t"
+#define _TOKEN_TEXT_MULTIMAP                       "multimap_t"
 #define _TOKEN_TEXT_HASH_SET                       "hash_set_t"
 #define _TOKEN_TEXT_HASH_MAP                       "hash_map_t"
+#define _TOKEN_TEXT_HASH_MULTISET                  "hash_multiset_t"
+#define _TOKEN_TEXT_HASH_MULTIMAP                  "hash_multimap_t"
 #define _TOKEN_TEXT_PAIR                           "pair_t"
 #define _TOKEN_TEXT_STRING                         "string_t"
 #define _TOKEN_TEXT_RANGE                          "range_t"
@@ -76,8 +80,12 @@
 #define _TOKEN_TEXT_DEQUE_ITERATOR                 "deque_iterator_t"
 #define _TOKEN_TEXT_SET_ITERATOR                   "set_iterator_t"
 #define _TOKEN_TEXT_MAP_ITERATOR                   "map_iterator_t"
+#define _TOKEN_TEXT_MULTISET_ITERATOR              "multiset_iterator_t"
+#define _TOKEN_TEXT_MULTIMAP_ITERATOR              "multimap_iterator_t"
 #define _TOKEN_TEXT_HASH_SET_ITERATOR              "hash_set_iterator_t"
 #define _TOKEN_TEXT_HASH_MAP_ITERATOR              "hash_map_iterator_t"
+#define _TOKEN_TEXT_HASH_MULTISET_ITERATOR         "hash_multiset_iterator_t"
+#define _TOKEN_TEXT_HASH_MULTIMAP_ITERATOR         "hash_multimap_iterator_t"
 #define _TOKEN_TEXT_STRING_ITERATOR                "string_iterator_t"
 #define _TOKEN_TEXT_INPUT_ITERATOR                 "input_iterator_t"
 #define _TOKEN_TEXT_OUTPUT_ITERATOR                "output_iterator_t"
@@ -136,8 +144,12 @@ static keytable_t _sgt_table[] = {
     {_TOKEN_KEY_PRIORITY_QUEUE,         _TOKEN_TEXT_PRIORITY_QUEUE},
     {_TOKEN_KEY_SET,                    _TOKEN_TEXT_SET},
     {_TOKEN_KEY_MAP,                    _TOKEN_TEXT_MAP},
+    {_TOKEN_KEY_MULTISET,               _TOKEN_TEXT_MULTISET},
+    {_TOKEN_KEY_MULTIMAP,               _TOKEN_TEXT_MULTIMAP},
     {_TOKEN_KEY_HASH_SET,               _TOKEN_TEXT_HASH_SET},
     {_TOKEN_KEY_HASH_MAP,               _TOKEN_TEXT_HASH_MAP},
+    {_TOKEN_KEY_HASH_MULTISET,          _TOKEN_TEXT_HASH_MULTISET},
+    {_TOKEN_KEY_HASH_MULTIMAP,          _TOKEN_TEXT_HASH_MULTIMAP},
     {_TOKEN_KEY_PAIR,                   _TOKEN_TEXT_PAIR},
     {_TOKEN_KEY_STRING,                 _TOKEN_TEXT_STRING},
     {_TOKEN_KEY_RANGE,                  _TOKEN_TEXT_RANGE},
@@ -149,8 +161,12 @@ static keytable_t _sgt_table[] = {
     {_TOKEN_KEY_DEQUE_ITERATOR,         _TOKEN_TEXT_DEQUE_ITERATOR},
     {_TOKEN_KEY_SET_ITERATOR,           _TOKEN_TEXT_SET_ITERATOR},
     {_TOKEN_KEY_MAP_ITERATOR,           _TOKEN_TEXT_MAP_ITERATOR},
+    {_TOKEN_KEY_MULTISET_ITERATOR,      _TOKEN_TEXT_MULTISET_ITERATOR},
+    {_TOKEN_KEY_MULTIMAP_ITERATOR,      _TOKEN_TEXT_MULTIMAP_ITERATOR},
     {_TOKEN_KEY_HASH_SET_ITERATOR,      _TOKEN_TEXT_HASH_SET_ITERATOR},
     {_TOKEN_KEY_HASH_MAP_ITERATOR,      _TOKEN_TEXT_HASH_MAP_ITERATOR},
+    {_TOKEN_KEY_HASH_MULTISET_ITERATOR, _TOKEN_TEXT_HASH_MULTISET_ITERATOR},
+    {_TOKEN_KEY_HASH_MULTIMAP_ITERATOR, _TOKEN_TEXT_HASH_MULTIMAP_ITERATOR},
     {_TOKEN_KEY_STRING_ITERATOR,        _TOKEN_TEXT_STRING_ITERATOR},
     {_TOKEN_KEY_INPUT_ITERATOR,         _TOKEN_TEXT_INPUT_ITERATOR},
     {_TOKEN_KEY_OUTPUT_ITERATOR,        _TOKEN_TEXT_OUTPUT_ITERATOR},
@@ -232,8 +248,12 @@ _typestyle_t _type_get_style(const char* s_typename, char* s_formalname)
         case _TOKEN_KEY_PRIORITY_QUEUE:
         case _TOKEN_KEY_SET:
         case _TOKEN_KEY_MAP:
+        case _TOKEN_KEY_MULTISET:
+        case _TOKEN_KEY_MULTIMAP:
         case _TOKEN_KEY_HASH_SET:
         case _TOKEN_KEY_HASH_MAP:
+        case _TOKEN_KEY_HASH_MULTISET:
+        case _TOKEN_KEY_HASH_MULTIMAP:
         case _TOKEN_KEY_PAIR:
         case _TOKEN_KEY_STRING:
         case _TOKEN_KEY_RANGE:
@@ -245,8 +265,12 @@ _typestyle_t _type_get_style(const char* s_typename, char* s_formalname)
         case _TOKEN_KEY_DEQUE_ITERATOR:
         case _TOKEN_KEY_SET_ITERATOR:
         case _TOKEN_KEY_MAP_ITERATOR:
+        case _TOKEN_KEY_MULTISET_ITERATOR:
+        case _TOKEN_KEY_MULTIMAP_ITERATOR:
         case _TOKEN_KEY_HASH_SET_ITERATOR:
         case _TOKEN_KEY_HASH_MAP_ITERATOR:
+        case _TOKEN_KEY_HASH_MULTISET_ITERATOR:
+        case _TOKEN_KEY_HASH_MULTIMAP_ITERATOR:
         case _TOKEN_KEY_STRING_ITERATOR:
         case _TOKEN_KEY_INPUT_ITERATOR:
         case _TOKEN_KEY_OUTPUT_ITERATOR:
@@ -762,8 +786,16 @@ bool_t _type_parse_sequence_name(char* s_formalname)
             _TOKEN_MATCH(_TOKEN_TEXT_SET, s_formalname);
             return true;
             break;
+        case _TOKEN_KEY_MULTISET:
+            _TOKEN_MATCH(_TOKEN_TEXT_MULTISET, s_formalname);
+            return true;
+            break;
         case _TOKEN_KEY_HASH_SET:
             _TOKEN_MATCH(_TOKEN_TEXT_HASH_SET, s_formalname);
+            return true;
+            break;
+        case _TOKEN_KEY_HASH_MULTISET:
+            _TOKEN_MATCH(_TOKEN_TEXT_HASH_MULTISET, s_formalname);
             return true;
             break;
         case _TOKEN_KEY_BASIC_STRING:
@@ -815,8 +847,16 @@ bool_t _type_parse_relation_name(char* s_formalname)
             _TOKEN_MATCH(_TOKEN_TEXT_MAP, s_formalname);
             return true;
             break;
+        case _TOKEN_KEY_MULTIMAP:
+            _TOKEN_MATCH(_TOKEN_TEXT_MULTIMAP, s_formalname);
+            return true;
+            break;
         case _TOKEN_KEY_HASH_MAP:
             _TOKEN_MATCH(_TOKEN_TEXT_HASH_MAP, s_formalname);
+            return true;
+            break;
+        case _TOKEN_KEY_HASH_MULTIMAP:
+            _TOKEN_MATCH(_TOKEN_TEXT_HASH_MULTIMAP, s_formalname);
             return true;
             break;
         case _TOKEN_KEY_PAIR:
@@ -869,12 +909,28 @@ bool_t _type_parse_iterator(char* s_formalname)
             _TOKEN_MATCH(_TOKEN_TEXT_MAP_ITERATOR, s_formalname);
             return true;
             break;
+        case _TOKEN_KEY_MULTISET_ITERATOR:
+            _TOKEN_MATCH(_TOKEN_TEXT_MULTISET_ITERATOR, s_formalname);
+            return true;
+            break;
+        case _TOKEN_KEY_MULTIMAP_ITERATOR:
+            _TOKEN_MATCH(_TOKEN_TEXT_MULTIMAP_ITERATOR, s_formalname);
+            return true;
+            break;
         case _TOKEN_KEY_HASH_SET_ITERATOR:
             _TOKEN_MATCH(_TOKEN_TEXT_HASH_SET_ITERATOR, s_formalname);
             return true;
             break;
         case _TOKEN_KEY_HASH_MAP_ITERATOR:
             _TOKEN_MATCH(_TOKEN_TEXT_HASH_MAP_ITERATOR, s_formalname);
+            return true;
+            break;
+        case _TOKEN_KEY_HASH_MULTISET_ITERATOR:
+            _TOKEN_MATCH(_TOKEN_TEXT_HASH_MULTISET_ITERATOR, s_formalname);
+            return true;
+            break;
+        case _TOKEN_KEY_HASH_MULTIMAP_ITERATOR:
+            _TOKEN_MATCH(_TOKEN_TEXT_HASH_MULTIMAP_ITERATOR, s_formalname);
             return true;
             break;
         case _TOKEN_KEY_STRING_ITERATOR:
@@ -964,13 +1020,17 @@ bool_t _type_parse_cstl_builtin(char* s_formalname)
         case _TOKEN_KEY_QUEUE:
         case _TOKEN_KEY_PRIORITY_QUEUE:
         case _TOKEN_KEY_SET:
+        case _TOKEN_KEY_MULTISET:
         case _TOKEN_KEY_HASH_SET:
+        case _TOKEN_KEY_HASH_MULTISET:
         case _TOKEN_KEY_BASIC_STRING:
             return _type_parse_sequence(s_formalname);
             break;
         /* CSTL_BUILTIN -> RELATION */
         case _TOKEN_KEY_MAP:
+        case _TOKEN_KEY_MULTIMAP:
         case _TOKEN_KEY_HASH_MAP:
+        case _TOKEN_KEY_HASH_MULTIMAP:
         case _TOKEN_KEY_PAIR:
             return _type_parse_relation(s_formalname);
             break;
@@ -992,8 +1052,12 @@ bool_t _type_parse_cstl_builtin(char* s_formalname)
         case _TOKEN_KEY_DEQUE_ITERATOR:
         case _TOKEN_KEY_SET_ITERATOR:
         case _TOKEN_KEY_MAP_ITERATOR:
+        case _TOKEN_KEY_MULTISET_ITERATOR:
+        case _TOKEN_KEY_MULTIMAP_ITERATOR:
         case _TOKEN_KEY_HASH_SET_ITERATOR:
         case _TOKEN_KEY_HASH_MAP_ITERATOR:
+        case _TOKEN_KEY_HASH_MULTISET_ITERATOR:
+        case _TOKEN_KEY_HASH_MULTIMAP_ITERATOR:
         case _TOKEN_KEY_STRING_ITERATOR:
         case _TOKEN_KEY_INPUT_ITERATOR:
         case _TOKEN_KEY_OUTPUT_ITERATOR:
@@ -1054,8 +1118,12 @@ bool_t _type_parse_type_descript(char* s_formalname)
         case _TOKEN_KEY_PRIORITY_QUEUE:
         case _TOKEN_KEY_SET:
         case _TOKEN_KEY_MAP:
+        case _TOKEN_KEY_MULTISET:
+        case _TOKEN_KEY_MULTIMAP:
         case _TOKEN_KEY_HASH_SET:
         case _TOKEN_KEY_HASH_MAP:
+        case _TOKEN_KEY_HASH_MULTISET:
+        case _TOKEN_KEY_HASH_MULTIMAP:
         case _TOKEN_KEY_PAIR:
         case _TOKEN_KEY_STRING:
         case _TOKEN_KEY_RANGE:
@@ -1067,8 +1135,12 @@ bool_t _type_parse_type_descript(char* s_formalname)
         case _TOKEN_KEY_DEQUE_ITERATOR:
         case _TOKEN_KEY_SET_ITERATOR:
         case _TOKEN_KEY_MAP_ITERATOR:
+        case _TOKEN_KEY_MULTISET_ITERATOR:
+        case _TOKEN_KEY_MULTIMAP_ITERATOR:
         case _TOKEN_KEY_HASH_SET_ITERATOR:
         case _TOKEN_KEY_HASH_MAP_ITERATOR:
+        case _TOKEN_KEY_HASH_MULTISET_ITERATOR:
+        case _TOKEN_KEY_HASH_MULTIMAP_ITERATOR:
         case _TOKEN_KEY_STRING_ITERATOR:
         case _TOKEN_KEY_INPUT_ITERATOR:
         case _TOKEN_KEY_OUTPUT_ITERATOR:

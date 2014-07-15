@@ -222,12 +222,6 @@ cstlinclude_HEADERS = \
             cstl_hash_map.h \
             cstl_hash_map_iterator.h \
             cstl_hash_map_private.h \
-            cstl_hash_multimap.h \
-            cstl_hash_multimap_iterator.h \
-            cstl_hash_multimap_private.h \
-            cstl_hash_multiset.h \
-            cstl_hash_multiset_iterator.h \
-            cstl_hash_multiset_private.h \
             cstl_hash_set.h \
             cstl_hash_set_iterator.h \
             cstl_hash_set_private.h \
@@ -243,12 +237,6 @@ cstlinclude_HEADERS = \
             cstl_map.h \
             cstl_map_iterator.h \
             cstl_map_private.h \
-            cstl_multimap.h \
-            cstl_multimap_iterator.h \
-            cstl_multimap_private.h \
-            cstl_multiset.h \
-            cstl_multiset_iterator.h \
-            cstl_multiset_private.h \
             cstl_numeric.h \
             cstl_numeric_private.h \
             cstl_pair.h \

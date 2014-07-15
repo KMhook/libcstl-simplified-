@@ -303,7 +303,9 @@ static inline bool_t _type_cstl_builtin_special(const char* s_typename)
             }
             break;
         case 19:
-            if (strncmp(s_typename, _HASH_SET_ITERATOR_TYPE, _TYPE_NAME_SIZE) == 0 ||
+            if (strncmp(s_typename, _MULTISET_ITERATOR_TYPE, _TYPE_NAME_SIZE) == 0 ||
+                strncmp(s_typename, _MULTIMAP_ITERATOR_TYPE, _TYPE_NAME_SIZE) == 0 ||
+                strncmp(s_typename, _HASH_SET_ITERATOR_TYPE, _TYPE_NAME_SIZE) == 0 ||
                 strncmp(s_typename, _HASH_MAP_ITERATOR_TYPE, _TYPE_NAME_SIZE) == 0) {
                 b_result = true;
             }
@@ -314,7 +316,9 @@ static inline bool_t _type_cstl_builtin_special(const char* s_typename)
             }
             break;
         case 24:
-            if(strncmp(s_typename, _BIDIRECTIONAL_ITERATOR_TYPE, _TYPE_NAME_SIZE) == 0 ||
+            if (strncmp(s_typename, _HASH_MULTISET_ITERATOR_TYPE, _TYPE_NAME_SIZE) == 0 ||
+                strncmp(s_typename, _HASH_MULTIMAP_ITERATOR_TYPE, _TYPE_NAME_SIZE) == 0 ||
+                strncmp(s_typename, _BIDIRECTIONAL_ITERATOR_TYPE, _TYPE_NAME_SIZE) == 0 ||
                 strncmp(s_typename, _RANDOM_ACCESS_ITERATOR_TYPE, _TYPE_NAME_SIZE) == 0) {
                 b_result = true;
             }

@@ -781,6 +781,7 @@ void fun_equal_map(const void* cpv_first, const void* cpv_second, void* pv_outpu
     *(bool_t*)pv_output = map_equal((map_t*)cpv_first, (map_t*)cpv_second);
 }
 
+/*
 void fun_equal_multiset(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -794,6 +795,7 @@ void fun_equal_multimap(const void* cpv_first, const void* cpv_second, void* pv_
 
     *(bool_t*)pv_output = multimap_equal((multimap_t*)cpv_first, (multimap_t*)cpv_second);
 }
+*/
 
 void fun_equal_hash_set(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
@@ -809,6 +811,7 @@ void fun_equal_hash_map(const void* cpv_first, const void* cpv_second, void* pv_
     *(bool_t*)pv_output = hash_map_equal((hash_map_t*)cpv_first, (hash_map_t*)cpv_second);
 }
 
+/*  
 void fun_equal_hash_multiset(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -822,6 +825,7 @@ void fun_equal_hash_multimap(const void* cpv_first, const void* cpv_second, void
 
     *(bool_t*)pv_output = hash_multimap_equal((hash_multimap_t*)cpv_first, (hash_multimap_t*)cpv_second);
 }
+*/
 
 void fun_equal_basic_string(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
@@ -1028,6 +1032,7 @@ void fun_not_equal_map(const void* cpv_first, const void* cpv_second, void* pv_o
     *(bool_t*)pv_output = map_not_equal((map_t*)cpv_first, (map_t*)cpv_second);
 }
 
+/*  
 void fun_not_equal_multiset(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1041,6 +1046,7 @@ void fun_not_equal_multimap(const void* cpv_first, const void* cpv_second, void*
 
     *(bool_t*)pv_output = multimap_not_equal((multimap_t*)cpv_first, (multimap_t*)cpv_second);
 }
+*/
 
 void fun_not_equal_hash_set(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
@@ -1056,6 +1062,7 @@ void fun_not_equal_hash_map(const void* cpv_first, const void* cpv_second, void*
     *(bool_t*)pv_output = hash_map_not_equal((hash_map_t*)cpv_first, (hash_map_t*)cpv_second);
 }
 
+/*  
 void fun_not_equal_hash_multiset(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1069,6 +1076,7 @@ void fun_not_equal_hash_multimap(const void* cpv_first, const void* cpv_second, 
 
     *(bool_t*)pv_output = hash_multimap_not_equal((hash_multimap_t*)cpv_first, (hash_multimap_t*)cpv_second);
 }
+*/
 
 void fun_not_equal_basic_string(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
@@ -1269,6 +1277,7 @@ void fun_greater_map(const void* cpv_first, const void* cpv_second, void* pv_out
     *(bool_t*)pv_output = map_greater((map_t*)cpv_first, (map_t*)cpv_second);
 }
 
+/*
 void fun_greater_multiset(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1282,6 +1291,7 @@ void fun_greater_multimap(const void* cpv_first, const void* cpv_second, void* p
 
     *(bool_t*)pv_output = multimap_greater((multimap_t*)cpv_first, (multimap_t*)cpv_second);
 }
+*/
 
 void fun_greater_hash_set(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
@@ -1297,6 +1307,7 @@ void fun_greater_hash_map(const void* cpv_first, const void* cpv_second, void* p
     *(bool_t*)pv_output = hash_map_greater((hash_map_t*)cpv_first, (hash_map_t*)cpv_second);
 }
 
+/*  
 void fun_greater_hash_multiset(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1310,6 +1321,7 @@ void fun_greater_hash_multimap(const void* cpv_first, const void* cpv_second, vo
 
     *(bool_t*)pv_output = hash_multimap_greater((hash_multimap_t*)cpv_first, (hash_multimap_t*)cpv_second);
 }
+*/
 
 void fun_greater_basic_string(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
@@ -1510,6 +1522,7 @@ void fun_greater_equal_map(const void* cpv_first, const void* cpv_second, void* 
     *(bool_t*)pv_output = map_greater_equal((map_t*)cpv_first, (map_t*)cpv_second);
 }
 
+/*  
 void fun_greater_equal_multiset(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1523,6 +1536,7 @@ void fun_greater_equal_multimap(const void* cpv_first, const void* cpv_second, v
 
     *(bool_t*)pv_output = multimap_greater_equal((multimap_t*)cpv_first, (multimap_t*)cpv_second);
 }
+*/
 
 void fun_greater_equal_hash_set(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
@@ -1538,6 +1552,7 @@ void fun_greater_equal_hash_map(const void* cpv_first, const void* cpv_second, v
     *(bool_t*)pv_output = hash_map_greater_equal((hash_map_t*)cpv_first, (hash_map_t*)cpv_second);
 }
 
+/*  
 void fun_greater_equal_hash_multiset(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1551,6 +1566,8 @@ void fun_greater_equal_hash_multimap(const void* cpv_first, const void* cpv_seco
 
     *(bool_t*)pv_output = hash_multimap_greater_equal((hash_multimap_t*)cpv_first, (hash_multimap_t*)cpv_second);
 }
+*/
+
 
 void fun_greater_equal_basic_string(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
@@ -1751,6 +1768,7 @@ void fun_less_map(const void* cpv_first, const void* cpv_second, void* pv_output
     *(bool_t*)pv_output = map_less((map_t*)cpv_first, (map_t*)cpv_second);
 }
 
+/*  
 void fun_less_multiset(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1764,6 +1782,7 @@ void fun_less_multimap(const void* cpv_first, const void* cpv_second, void* pv_o
 
     *(bool_t*)pv_output = multimap_less((multimap_t*)cpv_first, (multimap_t*)cpv_second);
 }
+*/
 
 void fun_less_hash_set(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
@@ -1779,6 +1798,7 @@ void fun_less_hash_map(const void* cpv_first, const void* cpv_second, void* pv_o
     *(bool_t*)pv_output = hash_map_less((hash_map_t*)cpv_first, (hash_map_t*)cpv_second);
 }
 
+/*   
 void fun_less_hash_multiset(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1792,6 +1812,7 @@ void fun_less_hash_multimap(const void* cpv_first, const void* cpv_second, void*
 
     *(bool_t*)pv_output = hash_multimap_less((hash_multimap_t*)cpv_first, (hash_multimap_t*)cpv_second);
 }
+*/
 
 void fun_less_basic_string(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
@@ -1992,6 +2013,7 @@ void fun_less_equal_map(const void* cpv_first, const void* cpv_second, void* pv_
     *(bool_t*)pv_output = map_less_equal((map_t*)cpv_first, (map_t*)cpv_second);
 }
 
+/*  
 void fun_less_equal_multiset(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -2005,6 +2027,7 @@ void fun_less_equal_multimap(const void* cpv_first, const void* cpv_second, void
 
     *(bool_t*)pv_output = multimap_less_equal((multimap_t*)cpv_first, (multimap_t*)cpv_second);
 }
+*/
 
 void fun_less_equal_hash_set(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
@@ -2020,6 +2043,7 @@ void fun_less_equal_hash_map(const void* cpv_first, const void* cpv_second, void
     *(bool_t*)pv_output = hash_map_less_equal((hash_map_t*)cpv_first, (hash_map_t*)cpv_second);
 }
 
+/*  
 void fun_less_equal_hash_multiset(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -2033,6 +2057,7 @@ void fun_less_equal_hash_multimap(const void* cpv_first, const void* cpv_second,
 
     *(bool_t*)pv_output = hash_multimap_less_equal((hash_multimap_t*)cpv_first, (hash_multimap_t*)cpv_second);
 }
+*/
 
 void fun_less_equal_basic_string(const void* cpv_first, const void* cpv_second, void* pv_output)
 {

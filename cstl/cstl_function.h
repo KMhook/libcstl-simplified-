@@ -204,12 +204,16 @@ extern void fun_equal_string(const void* cpv_first, const void* cpv_second, void
 extern void fun_equal_pair(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_equal_set(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_equal_map(const void* cpv_first, const void* cpv_second, void* pv_output);
+/*  
 extern void fun_equal_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_equal_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
+*/
 extern void fun_equal_hash_set(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_equal_hash_map(const void* cpv_first, const void* cpv_second, void* pv_output);
+/*  
 extern void fun_equal_hash_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_equal_hash_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
+*/
 extern void fun_equal_basic_string(const void* cpv_first, const void* cpv_second, void* pv_output);
 #ifndef _MSC_VER
 extern void fun_equal_long_long(const void* cpv_first, const void* cpv_second, void* pv_output);
@@ -247,12 +251,16 @@ extern void fun_not_equal_string(const void* cpv_first, const void* cpv_second, 
 extern void fun_not_equal_pair(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_not_equal_set(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_not_equal_map(const void* cpv_first, const void* cpv_second, void* pv_output);
+/*  
 extern void fun_not_equal_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_not_equal_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
+*/
 extern void fun_not_equal_hash_set(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_not_equal_hash_map(const void* cpv_first, const void* cpv_second, void* pv_output);
+/*  
 extern void fun_not_equal_hash_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_not_equal_hash_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
+*/
 extern void fun_not_equal_basic_string(const void* cpv_first, const void* cpv_second, void* pv_output);
 #ifndef _MSC_VER
 extern void fun_not_equal_long_long(const void* cpv_first, const void* cpv_second, void* pv_output);
@@ -290,12 +298,16 @@ extern void fun_greater_string(const void* cpv_first, const void* cpv_second, vo
 extern void fun_greater_pair(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_greater_set(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_greater_map(const void* cpv_first, const void* cpv_second, void* pv_output);
+/*  
 extern void fun_greater_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_greater_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
+*/
 extern void fun_greater_hash_set(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_greater_hash_map(const void* cpv_first, const void* cpv_second, void* pv_output);
+/*  
 extern void fun_greater_hash_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_greater_hash_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
+*/
 extern void fun_greater_basic_string(const void* cpv_first, const void* cpv_second, void* pv_output);
 #ifndef _MSC_VER
 extern void fun_greater_long_long(const void* cpv_first, const void* cpv_second, void* pv_output);
@@ -333,12 +345,16 @@ extern void fun_greater_equal_string(const void* cpv_first, const void* cpv_seco
 extern void fun_greater_equal_pair(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_greater_equal_set(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_greater_equal_map(const void* cpv_first, const void* cpv_second, void* pv_output);
+/*  
 extern void fun_greater_equal_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_greater_equal_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
+*/
 extern void fun_greater_equal_hash_set(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_greater_equal_hash_map(const void* cpv_first, const void* cpv_second, void* pv_output);
+/*  
 extern void fun_greater_equal_hash_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_greater_equal_hash_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
+*/
 extern void fun_greater_equal_basic_string(const void* cpv_first, const void* cpv_second, void* pv_output);
 #ifndef _MSC_VER
 extern void fun_greater_equal_long_long(const void* cpv_first, const void* cpv_second, void* pv_output);
@@ -376,12 +392,16 @@ extern void fun_less_string(const void* cpv_first, const void* cpv_second, void*
 extern void fun_less_pair(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_less_set(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_less_map(const void* cpv_first, const void* cpv_second, void* pv_output);
+/*  
 extern void fun_less_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_less_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
+*/
 extern void fun_less_hash_set(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_less_hash_map(const void* cpv_first, const void* cpv_second, void* pv_output);
+/*  
 extern void fun_less_hash_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_less_hash_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
+*/
 extern void fun_less_basic_string(const void* cpv_first, const void* cpv_second, void* pv_output);
 #ifndef _MSC_VER
 extern void fun_less_long_long(const void* cpv_first, const void* cpv_second, void* pv_output);
@@ -419,12 +439,16 @@ extern void fun_less_equal_string(const void* cpv_first, const void* cpv_second,
 extern void fun_less_equal_pair(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_less_equal_set(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_less_equal_map(const void* cpv_first, const void* cpv_second, void* pv_output);
+/*  
 extern void fun_less_equal_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_less_equal_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
+*/
 extern void fun_less_equal_hash_set(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_less_equal_hash_map(const void* cpv_first, const void* cpv_second, void* pv_output);
+/*  
 extern void fun_less_equal_hash_multiset(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_less_equal_hash_multimap(const void* cpv_first, const void* cpv_second, void* pv_output);
+*/
 extern void fun_less_equal_basic_string(const void* cpv_first, const void* cpv_second, void* pv_output);
 #ifndef _MSC_VER
 extern void fun_less_equal_long_long(const void* cpv_first, const void* cpv_second, void* pv_output);
