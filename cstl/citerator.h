@@ -37,7 +37,7 @@ extern "C" {
 #include <cstl/cstl_vector_iterator.h>
 #include <cstl/cstl_list_iterator.h>
 #include <cstl/cstl_deque_iterator.h>
-#include <cstl/cstl_slist_iterator.h>
+//#include <cstl/cstl_slist_iterator.h>
 #include <cstl/cstl_set_iterator.h>
 #include <cstl/cstl_map_iterator.h>
 #include <cstl/cstl_hash_set_iterator.h>

@@ -127,11 +127,12 @@ extern void _type_init_list(const void* cpv_input, void* pv_output);
 extern void _type_copy_list(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_less_list(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_destroy_list(const void* cpv_input, void* pv_output);
-/* slist_t */
+/* slist_t 
 extern void _type_init_slist(const void* cpv_input, void* pv_output);
 extern void _type_copy_slist(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_less_slist(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_destroy_slist(const void* cpv_input, void* pv_output);
+*/
 /* deque_t */
 extern void _type_init_deque(const void* cpv_input, void* pv_output);
 extern void _type_copy_deque(const void* cpv_first, const void* cpv_second, void* pv_output);

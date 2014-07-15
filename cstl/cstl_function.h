@@ -197,7 +197,7 @@ extern void fun_equal_pointer(const void* cpv_first, const void* cpv_second, voi
 extern void fun_equal_vector(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_equal_deque(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_equal_list(const void* cpv_first, const void* cpv_second, void* pv_output);
-extern void fun_equal_slist(const void* cpv_first, const void* cpv_second, void* pv_output);
+//extern void fun_equal_slist(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_equal_queue(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_equal_stack(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_equal_string(const void* cpv_first, const void* cpv_second, void* pv_output);
@@ -291,7 +291,7 @@ extern void fun_greater_pointer(const void* cpv_first, const void* cpv_second, v
 extern void fun_greater_vector(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_greater_deque(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_greater_list(const void* cpv_first, const void* cpv_second, void* pv_output);
-extern void fun_greater_slist(const void* cpv_first, const void* cpv_second, void* pv_output);
+//extern void fun_greater_slist(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_greater_queue(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_greater_stack(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void fun_greater_string(const void* cpv_first, const void* cpv_second, void* pv_output);

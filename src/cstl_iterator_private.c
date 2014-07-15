@@ -30,7 +30,7 @@
 #include <cstl/cvector.h>
 #include <cstl/clist.h>
 #include <cstl/cdeque.h>
-#include <cstl/cslist.h>
+//#include <cstl/cslist.h>
 #include <cstl/cset.h>
 #include <cstl/cmap.h>
 #include <cstl/chash_set.h>
@@ -56,7 +56,7 @@ bool_t _iterator_is_valid(iterator_t it_iter)
     if ((it_iter._t_containertype == _VECTOR_CONTAINER ||
          it_iter._t_containertype == _LIST_CONTAINER ||
          it_iter._t_containertype == _DEQUE_CONTAINER ||
-         it_iter._t_containertype == _SLIST_CONTAINER ||
+         //it_iter._t_containertype == _SLIST_CONTAINER ||
          it_iter._t_containertype == _MAP_CONTAINER ||
          it_iter._t_containertype == _SET_CONTAINER ||
          it_iter._t_containertype == _HASH_SET_CONTAINER ||
@@ -91,9 +91,11 @@ const void* _iterator_get_pointer_ignore_cstr(iterator_t it_iter)
         case _DEQUE_CONTAINER:
             return _deque_iterator_get_pointer_ignore_cstr(it_iter);
             break;
+						/*  
         case _SLIST_CONTAINER:
             return _slist_iterator_get_pointer_ignore_cstr(it_iter);
             break;
+						*/
         case _SET_CONTAINER:
             return _set_iterator_get_pointer_ignore_cstr(it_iter);
             break;
@@ -149,9 +151,11 @@ bool_t _iterator_before(iterator_t it_first, iterator_t it_second)
         case _LIST_CONTAINER:
             return _list_iterator_before(it_first, it_second);
             break;
+						/*  
         case _SLIST_CONTAINER:
             return _slist_iterator_before(it_first, it_second);
             break;
+*/
         case _SET_CONTAINER:
             return _set_iterator_before(it_first, it_second);
             break;
@@ -254,9 +258,11 @@ _typeinfo_t* _iterator_get_typeinfo(iterator_t it_iter)
         case _LIST_CONTAINER:
             return &((list_t*)it_iter._pt_container)->_t_typeinfo;
             break;
+						/*  
         case _SLIST_CONTAINER:
             return &((slist_t*)it_iter._pt_container)->_t_typeinfo;
             break;
+*/
         case _SET_CONTAINER:
             return &((set_t*)it_iter._pt_container)->_t_tree._t_typeinfo;
             break;
@@ -369,11 +375,13 @@ void* _iterator_allocate_init_elem(iterator_t it_iter)
                 ((list_t*)it_iter._pt_container)->_t_typeinfo._pt_type->_t_typesize, 1);
             _list_init_elem_auxiliary((list_t*)it_iter._pt_container, pv_value);
             break;
+						/*  
         case _SLIST_CONTAINER:
             pv_value = _alloc_allocate(&((slist_t*)it_iter._pt_container)->_t_allocator,
                 ((slist_t*)it_iter._pt_container)->_t_typeinfo._pt_type->_t_typesize, 1);
             _slist_init_elem_auxiliary((slist_t*)it_iter._pt_container, pv_value);
             break;
+*/
         case _SET_CONTAINER:
             pv_value = _alloc_allocate(&((set_t*)it_iter._pt_container)->_t_tree._t_allocator,
                 ((set_t*)it_iter._pt_container)->_t_tree._t_typeinfo._pt_type->_t_typesize, 1);
@@ -440,12 +448,14 @@ void _iterator_deallocate_destroy_elem(iterator_t it_iter, void* pv_value)
             _alloc_deallocate(&((list_t*)it_iter._pt_container)->_t_allocator, pv_value,
                 ((list_t*)it_iter._pt_container)->_t_typeinfo._pt_type->_t_typesize, 1);
             break;
+						/*  
         case _SLIST_CONTAINER:
             ((slist_t*)it_iter._pt_container)->_t_typeinfo._pt_type->_t_typedestroy(pv_value, &b_result);
             assert(b_result);
             _alloc_deallocate(&((slist_t*)it_iter._pt_container)->_t_allocator, pv_value,
                 ((slist_t*)it_iter._pt_container)->_t_typeinfo._pt_type->_t_typesize, 1);
             break;
+						*/
         case _SET_CONTAINER:
             ((set_t*)it_iter._pt_container)->_t_tree._t_typeinfo._pt_type->_t_typedestroy(pv_value, &b_result);
             assert(b_result);

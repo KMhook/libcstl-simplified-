@@ -30,7 +30,7 @@
 #include <cstl/cvector.h>
 #include <cstl/clist.h>
 #include <cstl/cdeque.h>
-#include <cstl/cslist.h>
+//#include <cstl/cslist.h>
 #include <cstl/cstack.h>
 #include <cstl/cqueue.h>
 #include <cstl/cstring.h>
@@ -451,7 +451,7 @@ bfun_t _fun_get_binary(iterator_t it_iter, fun_type_t ftype_type)
             case _LESS_EQUAL_FUN:       return fun_less_equal_list;             break;
             default: break;
         }
-    } else if (strncmp(s_typename, _SLIST_TYPE, _TYPE_NAME_SIZE) == 0) {                /* slist_t */
+    }/* else if (strncmp(s_typename, _SLIST_TYPE, _TYPE_NAME_SIZE) == 0) {                // slist_t 
         switch (ftype_type) {
             case _EQUAL_FUN:            return fun_equal_slist;                 break;
             case _NOT_EQUAL_FUN:        return fun_not_equal_slist;             break;
@@ -461,7 +461,7 @@ bfun_t _fun_get_binary(iterator_t it_iter, fun_type_t ftype_type)
             case _LESS_EQUAL_FUN:       return fun_less_equal_slist;            break;
             default: break;
         }
-    } else if (strncmp(s_typename, _QUEUE_TYPE, _TYPE_NAME_SIZE) == 0) {                /* queue_t */
+    } */else if (strncmp(s_typename, _QUEUE_TYPE, _TYPE_NAME_SIZE) == 0) {                /* queue_t */
         switch (ftype_type) {
             case _EQUAL_FUN:            return fun_equal_queue;                 break;
             case _NOT_EQUAL_FUN:        return fun_not_equal_queue;             break;

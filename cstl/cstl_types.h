@@ -80,7 +80,7 @@ extern "C" {
 /* cstl type */
 #define _VECTOR_TYPE                    "vector_t"
 #define _LIST_TYPE                      "list_t"
-#define _SLIST_TYPE                     "slist_t"
+//#define _SLIST_TYPE                     "slist_t"
 #define _DEQUE_TYPE                     "deque_t"
 #define _STACK_TYPE                     "stack_t"
 #define _QUEUE_TYPE                     "queue_t"
@@ -97,7 +97,7 @@ extern "C" {
 #define _ITERATOR_TYPE                  "iterator_t"
 #define _VECTOR_ITERATOR_TYPE           "vector_iterator_t"
 #define _LIST_ITERATOR_TYPE             "list_iterator_t"
-#define _SLIST_ITERATOR_TYPE            "slist_iterator_t"
+//#define _SLIST_ITERATOR_TYPE            "slist_iterator_t"
 #define _DEQUE_ITERATOR_TYPE            "deque_iterator_t"
 #define _SET_ITERATOR_TYPE              "set_iterator_t"
 #define _MAP_ITERATOR_TYPE              "map_iterator_t"

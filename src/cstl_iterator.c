@@ -56,9 +56,11 @@ void iterator_get_value(iterator_t it_iter, void* pv_value)
         case _DEQUE_CONTAINER:
             _deque_iterator_get_value(it_iter, pv_value);
             break;
+						/*
         case _SLIST_CONTAINER:
             _slist_iterator_get_value(it_iter, pv_value);
             break;
+						*/
         case _SET_CONTAINER:
             _set_iterator_get_value(it_iter, pv_value);
             break;
@@ -99,10 +101,12 @@ void iterator_set_value(iterator_t it_iter, const void* cpv_value)
         case _DEQUE_CONTAINER:
             _deque_iterator_set_value(it_iter, cpv_value);
             break;
+						/*  
         case _SLIST_CONTAINER:
             _slist_iterator_set_value(it_iter, cpv_value);
             break;
-        case _BASIC_STRING_CONTAINER:
+        */
+				case _BASIC_STRING_CONTAINER:
             _basic_string_iterator_set_value(it_iter, cpv_value);
             break;
         default:
@@ -129,10 +133,12 @@ const void* iterator_get_pointer(iterator_t it_iter)
         case _DEQUE_CONTAINER:
             return _deque_iterator_get_pointer(it_iter);
             break;
+						/*  
         case _SLIST_CONTAINER:
             return _slist_iterator_get_pointer(it_iter);
             break;
-        case _SET_CONTAINER:
+        */
+				case _SET_CONTAINER:
             return _set_iterator_get_pointer(it_iter);
             break;
         case _MAP_CONTAINER:
@@ -171,10 +177,12 @@ iterator_t iterator_next(iterator_t it_iter)
         case _DEQUE_CONTAINER:
             return _deque_iterator_next(it_iter);
             break;
+						/*  
         case _SLIST_CONTAINER:
             return _slist_iterator_next(it_iter);
             break;
-        case _SET_CONTAINER:
+       */
+				case _SET_CONTAINER:
             return _set_iterator_next(it_iter);
             break;
         case _MAP_CONTAINER:
@@ -318,9 +326,11 @@ bool_t iterator_equal(iterator_t it_first, iterator_t it_second)
         case _DEQUE_CONTAINER:
             return _deque_iterator_equal(it_first, it_second);
             break;
+						/*
         case _SLIST_CONTAINER:
             return _slist_iterator_equal(it_first, it_second);
             break;
+						*/
         case _SET_CONTAINER:
             return _set_iterator_equal(it_first, it_second);
             break;
@@ -502,9 +512,11 @@ int iterator_distance(iterator_t it_first, iterator_t it_second)
         case _LIST_CONTAINER:
             return _list_iterator_distance(it_first, it_second);
             break;
+						/*  
         case _SLIST_CONTAINER:
             return _slist_iterator_distance(it_first, it_second);
             break;
+*/
         case _SET_CONTAINER:
             return _set_iterator_distance(it_first, it_second);
             break;

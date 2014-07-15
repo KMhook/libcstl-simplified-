@@ -198,7 +198,6 @@ cstlinclude_HEADERS = \
             cnumeric.h \
             cqueue.h \
             cset.h \
-            cslist.h \
             cstack.h \
             cstl_algo_nonmutating.h \
             cstl_algo_nonmutating_private.h \
@@ -251,9 +250,6 @@ cstlinclude_HEADERS = \
             cstl_set.h \
             cstl_set_iterator.h \
             cstl_set_private.h \
-            cstl_slist.h \
-            cstl_slist_iterator.h \
-            cstl_slist_private.h \
             cstl_stack.h \
             cstl_stack_private.h \
             cstl_string.h \

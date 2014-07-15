@@ -27,7 +27,7 @@
 
 #include <cstl/cvector.h>
 #include <cstl/clist.h>
-#include <cstl/cslist.h>
+//#include <cstl/cslist.h>
 #include <cstl/cdeque.h>
 #include <cstl/cstack.h>
 #include <cstl/cqueue.h>
@@ -496,7 +496,7 @@ void _type_destroy_list(const void* cpv_input, void* pv_output)
     *(bool_t*)pv_output = true;
 }
 
-/* slist_t */
+/* slist_t 
 void _type_init_slist(const void* cpv_input, void* pv_output)
 {
     bool_t b_result = false;
@@ -504,7 +504,7 @@ void _type_init_slist(const void* cpv_input, void* pv_output)
 
     b_result = _create_slist_auxiliary((slist_t*)cpv_input, (char*)pv_output);
     assert(b_result);
-    /* initialize slist_t */
+    // initialize slist_t 
     slist_init((slist_t*)cpv_input);
 }
 
@@ -527,6 +527,7 @@ void _type_destroy_slist(const void* cpv_input, void* pv_output)
     _slist_destroy_auxiliary((slist_t*)cpv_input);
     *(bool_t*)pv_output = true;
 }
+*/
 
 /* deque_t */
 void _type_init_deque(const void* cpv_input, void* pv_output)

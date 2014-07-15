@@ -55,12 +55,12 @@ pic_mode=default
 fast_install=yes
 
 # The host system.
-host_alias=
-host=i686-pc-linux-gnu
-host_os=linux-gnu
+host_alias=mipsel-linux-uclibc
+host=mipsel-unknown-linux-uclibc
+host_os=linux-uclibc
 
 # The build system.
-build_alias=
+build_alias=i686-linux
 build=i686-pc-linux-gnu
 build_os=linux-gnu
 
@@ -80,7 +80,7 @@ EGREP="/bin/grep -E"
 FGREP="/bin/grep -F"
 
 # A BSD- or MS-compatible name lister.
-NM="/usr/bin/nm -B"
+NM="/projects/hnd/tools/linux/hndtools-mipsel-linux-uclibc-4.2.3/bin/mipsel-linux-uclibc-nm -B"
 
 # Whether we need soft or hard links.
 LN_S="ln -s"
@@ -108,7 +108,7 @@ reload_flag=" -r"
 reload_cmds="\$LD\$reload_flag -o \$output\$reload_objs"
 
 # An object symbol dumper.
-OBJDUMP="objdump"
+OBJDUMP="mipsel-linux-uclibc-objdump"
 
 # Method to check whether dependent libraries are shared objects.
 deplibs_check_method="pass_all"
@@ -117,19 +117,19 @@ deplibs_check_method="pass_all"
 file_magic_cmd="\$MAGIC_CMD"
 
 # The archiver.
-AR="ar"
+AR="mipsel-linux-uclibc-ar"
 AR_FLAGS="cru"
 
 # A symbol stripping program.
-STRIP="strip"
+STRIP="mipsel-linux-uclibc-strip"
 
 # Commands used to install an old-style archive.
-RANLIB="ranlib"
+RANLIB="mipsel-linux-uclibc-ranlib"
 old_postinstall_cmds="chmod 644 \$oldlib~\$RANLIB \$oldlib"
 old_postuninstall_cmds=""
 
 # A C compiler.
-LTCC="gcc -std=gnu99"
+LTCC="mipsel-linux-uclibc-gcc"
 
 # LTCC compiler flags.
 LTCFLAGS="-g -O2"
@@ -234,7 +234,7 @@ finish_eval=""
 hardcode_into_libs=yes
 
 # Compile-time system search path for libraries.
-sys_lib_search_path_spec="/usr/lib/gcc/i686-linux-gnu/4.8 /usr/lib/i386-linux-gnu /usr/lib /lib/i386-linux-gnu /lib"
+sys_lib_search_path_spec="/projects/hnd/tools/linux/hndtools-mipsel-linux-uclibc-4.2.3/lib/gcc/mipsel-linux-uclibc/4.2.3 /projects/hnd/tools/linux/hndtools-mipsel-linux-uclibc-4.2.3/mipsel-linux-uclibc/lib"
 
 # Run-time system search path for libraries.
 sys_lib_dlsearch_path_spec="/lib64 /usr/lib64 /lib /usr/lib /usr/lib/i386-linux-gnu/mesa-egl /usr/lib/i386-linux-gnu/mesa /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /lib64 /usr/lib64 /libx32 /usr/libx32 "
@@ -249,18 +249,18 @@ dlopen_self=unknown
 dlopen_self_static=unknown
 
 # Commands to strip libraries.
-old_striplib="strip --strip-debug"
-striplib="strip --strip-unneeded"
+old_striplib="mipsel-linux-uclibc-strip --strip-debug"
+striplib="mipsel-linux-uclibc-strip --strip-unneeded"
 
 
 # The linker used to build libraries.
-LD="/usr/bin/ld"
+LD="/projects/hnd/tools/linux/hndtools-mipsel-linux-uclibc-4.2.3/usr/bin/mipsel-linux-uclibc-ld"
 
 # Commands used to build an old-style archive.
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$oldlib"
 
 # A language specific compiler.
-CC="gcc"
+CC="mipsel-linux-uclibc-gcc"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes

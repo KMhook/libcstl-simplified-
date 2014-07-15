@@ -27,7 +27,7 @@
 
 #include <cstl/cvector.h>
 #include <cstl/clist.h>
-#include <cstl/cslist.h>
+//#include <cstl/cslist.h>
 #include <cstl/cdeque.h>
 #include <cstl/cstack.h>
 #include <cstl/cqueue.h>
@@ -285,7 +285,9 @@ static inline bool_t _type_cstl_builtin_special(const char* s_typename)
             break;
         case 16:
             if (strncmp(s_typename, _INPUT_ITERATOR_TYPE, _TYPE_NAME_SIZE) == 0 ||
+								/*
                 strncmp(s_typename, _SLIST_ITERATOR_TYPE, _TYPE_NAME_SIZE) == 0 ||
+								*/
                 strncmp(s_typename, _DEQUE_ITERATOR_TYPE, _TYPE_NAME_SIZE) == 0) {
                 b_result = true;
             }

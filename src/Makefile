@@ -33,7 +33,7 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = i686-pc-linux-gnu
-host_triplet = i686-pc-linux-gnu
+host_triplet = mipsel-unknown-linux-uclibc
 subdir = src
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -115,9 +115,7 @@ am_libcstl_la_OBJECTS = libcstl_la-cstl_algo_nonmutating.lo \
 	libcstl_la-cstl_rb_tree_private.lo \
 	libcstl_la-cstl_rb_tree_aux.lo libcstl_la-cstl_set.lo \
 	libcstl_la-cstl_set_iterator.lo libcstl_la-cstl_set_private.lo \
-	libcstl_la-cstl_set_aux.lo libcstl_la-cstl_slist.lo \
-	libcstl_la-cstl_slist_iterator.lo \
-	libcstl_la-cstl_slist_private.lo libcstl_la-cstl_slist_aux.lo \
+	libcstl_la-cstl_set_aux.lo \
 	libcstl_la-cstl_stack.lo libcstl_la-cstl_stack_private.lo \
 	libcstl_la-cstl_string.lo libcstl_la-cstl_string_private.lo \
 	libcstl_la-cstl_types.lo libcstl_la-cstl_types_builtin.lo \
@@ -149,15 +147,15 @@ CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = ${SHELL} /home/kmhook/Programs/libcstl/missing --run aclocal-1.11
 AMTAR = ${SHELL} /home/kmhook/Programs/libcstl/missing --run tar
-AR = ar
+AR = mipsel-linux-uclibc-ar
 AUTOCONF = ${SHELL} /home/kmhook/Programs/libcstl/missing --run autoconf
 AUTOHEADER = ${SHELL} /home/kmhook/Programs/libcstl/missing --run autoheader
 AUTOMAKE = ${SHELL} /home/kmhook/Programs/libcstl/missing --run automake-1.11
 AWK = gawk
-CC = gcc -std=gnu99
+CC = mipsel-linux-uclibc-gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
-CPP = gcc -E
+CPP = mipsel-linux-uclibc-gcc -E
 CPPFLAGS = 
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
@@ -176,19 +174,19 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LD = /usr/bin/ld
+LD = /projects/hnd/tools/linux/hndtools-mipsel-linux-uclibc-4.2.3/usr/bin/mipsel-linux-uclibc-ld
 LDFLAGS = 
-LIBOBJS = 
+LIBOBJS =  ${LIBOBJDIR}malloc$U.o
 LIBS = 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
-LTLIBOBJS = 
+LTLIBOBJS =  ${LIBOBJDIR}malloc$U.lo
 MAKEINFO = ${SHELL} /home/kmhook/Programs/libcstl/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
-NM = /usr/bin/nm -B
+NM = /projects/hnd/tools/linux/hndtools-mipsel-linux-uclibc-4.2.3/bin/mipsel-linux-uclibc-nm -B
 NMEDIT = 
-OBJDUMP = objdump
+OBJDUMP = mipsel-linux-uclibc-objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
@@ -199,17 +197,17 @@ PACKAGE_STRING = libcstl 2.3.0
 PACKAGE_TARNAME = libcstl
 PACKAGE_VERSION = 2.3.0
 PATH_SEPARATOR = :
-RANLIB = ranlib
+RANLIB = mipsel-linux-uclibc-ranlib
 SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/bash
-STRIP = strip
+STRIP = mipsel-linux-uclibc-strip
 VERSION = 2.3.0
 abs_builddir = /home/kmhook/Programs/libcstl/src
 abs_srcdir = /home/kmhook/Programs/libcstl/src
 abs_top_builddir = /home/kmhook/Programs/libcstl
 abs_top_srcdir = /home/kmhook/Programs/libcstl
-ac_ct_CC = gcc
+ac_ct_CC = 
 ac_ct_DUMPBIN = 
 am__include = include
 am__leading_dot = .
@@ -218,7 +216,7 @@ am__tar = ${AMTAR} chof - "$$tardir"
 am__untar = ${AMTAR} xf -
 bindir = ${exec_prefix}/bin
 build = i686-pc-linux-gnu
-build_alias = 
+build_alias = i686-linux
 build_cpu = i686
 build_os = linux-gnu
 build_vendor = pc
@@ -228,16 +226,16 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = i686-pc-linux-gnu
-host_alias = 
-host_cpu = i686
-host_os = linux-gnu
-host_vendor = pc
+host = mipsel-unknown-linux-uclibc
+host_alias = mipsel-linux-uclibc
+host_cpu = mipsel
+host_os = linux-uclibc
+host_vendor = unknown
 htmldir = ${docdir}
-includedir = ${prefix}/include
+includedir = /projects/hnd/tools/linux/hndtools-mipsel-linux-uclibc-4.2.3/include
 infodir = ${datarootdir}/info
 install_sh = ${SHELL} /home/kmhook/Programs/libcstl/install-sh
-libdir = ${exec_prefix}/lib
+libdir = /projects/hnd/tools/linux/hndtools-mipsel-linux-uclibc-4.2.3/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
 localstatedir = ${prefix}/var
@@ -246,7 +244,7 @@ mandir = ${datarootdir}/man
 mkdir_p = /bin/mkdir -p
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /usr/i686/libcstl
+prefix = /usr/mipsel/libcstl
 program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
@@ -283,7 +281,6 @@ libcstl_la_SOURCES = \
              cstl_queue.c cstl_queue_private.c \
              cstl_rb_tree.c cstl_rb_tree_iterator.c cstl_rb_tree_private.c cstl_rb_tree_aux.c cstl_rb_tree_aux.h \
              cstl_set.c cstl_set_iterator.c cstl_set_private.c cstl_set_aux.c cstl_set_aux.h \
-             cstl_slist.c cstl_slist_iterator.c cstl_slist_private.c cstl_slist_aux.c cstl_slist_aux.h \
              cstl_stack.c cstl_stack_private.c \
              cstl_string.c cstl_string_private.c \
              cstl_types.c cstl_types_builtin.c cstl_types_builtin.h cstl_types_parse.c cstl_types_parse.h cstl_types_aux.c cstl_types_aux.h \
@@ -430,10 +427,6 @@ include ./$(DEPDIR)/libcstl_la-cstl_set.Plo
 include ./$(DEPDIR)/libcstl_la-cstl_set_aux.Plo
 include ./$(DEPDIR)/libcstl_la-cstl_set_iterator.Plo
 include ./$(DEPDIR)/libcstl_la-cstl_set_private.Plo
-include ./$(DEPDIR)/libcstl_la-cstl_slist.Plo
-include ./$(DEPDIR)/libcstl_la-cstl_slist_aux.Plo
-include ./$(DEPDIR)/libcstl_la-cstl_slist_iterator.Plo
-include ./$(DEPDIR)/libcstl_la-cstl_slist_private.Plo
 include ./$(DEPDIR)/libcstl_la-cstl_stack.Plo
 include ./$(DEPDIR)/libcstl_la-cstl_stack_private.Plo
 include ./$(DEPDIR)/libcstl_la-cstl_string.Plo
@@ -923,34 +916,6 @@ libcstl_la-cstl_set_aux.lo: cstl_set_aux.c
 #	source='cstl_set_aux.c' object='libcstl_la-cstl_set_aux.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
 #	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_set_aux.lo `test -f 'cstl_set_aux.c' || echo '$(srcdir)/'`cstl_set_aux.c
-
-libcstl_la-cstl_slist.lo: cstl_slist.c
-	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_slist.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_slist.Tpo -c -o libcstl_la-cstl_slist.lo `test -f 'cstl_slist.c' || echo '$(srcdir)/'`cstl_slist.c
-	$(am__mv) $(DEPDIR)/libcstl_la-cstl_slist.Tpo $(DEPDIR)/libcstl_la-cstl_slist.Plo
-#	source='cstl_slist.c' object='libcstl_la-cstl_slist.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_slist.lo `test -f 'cstl_slist.c' || echo '$(srcdir)/'`cstl_slist.c
-
-libcstl_la-cstl_slist_iterator.lo: cstl_slist_iterator.c
-	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_slist_iterator.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_slist_iterator.Tpo -c -o libcstl_la-cstl_slist_iterator.lo `test -f 'cstl_slist_iterator.c' || echo '$(srcdir)/'`cstl_slist_iterator.c
-	$(am__mv) $(DEPDIR)/libcstl_la-cstl_slist_iterator.Tpo $(DEPDIR)/libcstl_la-cstl_slist_iterator.Plo
-#	source='cstl_slist_iterator.c' object='libcstl_la-cstl_slist_iterator.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_slist_iterator.lo `test -f 'cstl_slist_iterator.c' || echo '$(srcdir)/'`cstl_slist_iterator.c
-
-libcstl_la-cstl_slist_private.lo: cstl_slist_private.c
-	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_slist_private.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_slist_private.Tpo -c -o libcstl_la-cstl_slist_private.lo `test -f 'cstl_slist_private.c' || echo '$(srcdir)/'`cstl_slist_private.c
-	$(am__mv) $(DEPDIR)/libcstl_la-cstl_slist_private.Tpo $(DEPDIR)/libcstl_la-cstl_slist_private.Plo
-#	source='cstl_slist_private.c' object='libcstl_la-cstl_slist_private.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_slist_private.lo `test -f 'cstl_slist_private.c' || echo '$(srcdir)/'`cstl_slist_private.c
-
-libcstl_la-cstl_slist_aux.lo: cstl_slist_aux.c
-	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_slist_aux.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_slist_aux.Tpo -c -o libcstl_la-cstl_slist_aux.lo `test -f 'cstl_slist_aux.c' || echo '$(srcdir)/'`cstl_slist_aux.c
-	$(am__mv) $(DEPDIR)/libcstl_la-cstl_slist_aux.Tpo $(DEPDIR)/libcstl_la-cstl_slist_aux.Plo
-#	source='cstl_slist_aux.c' object='libcstl_la-cstl_slist_aux.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_slist_aux.lo `test -f 'cstl_slist_aux.c' || echo '$(srcdir)/'`cstl_slist_aux.c
 
 libcstl_la-cstl_stack.lo: cstl_stack.c
 	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_stack.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_stack.Tpo -c -o libcstl_la-cstl_stack.lo `test -f 'cstl_stack.c' || echo '$(srcdir)/'`cstl_stack.c

@@ -30,7 +30,7 @@
 #include <cstl/cvector.h>
 #include <cstl/clist.h>
 #include <cstl/cdeque.h>
-#include <cstl/cslist.h>
+//#include <cstl/cslist.h>
 #include <cstl/cstack.h>
 #include <cstl/cqueue.h>
 #include <cstl/cstring.h>
@@ -732,12 +732,14 @@ void fun_equal_list(const void* cpv_first, const void* cpv_second, void* pv_outp
     *(bool_t*)pv_output = list_equal((list_t*)cpv_first, (list_t*)cpv_second);
 }
 
+/*
 void fun_equal_slist(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
 
     *(bool_t*)pv_output = slist_equal((slist_t*)cpv_first, (slist_t*)cpv_second);
 }
+*/
 
 void fun_equal_queue(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
@@ -983,12 +985,14 @@ void fun_not_equal_list(const void* cpv_first, const void* cpv_second, void* pv_
     *(bool_t*)pv_output = list_not_equal((list_t*)cpv_first, (list_t*)cpv_second);
 }
 
+/*  
 void fun_not_equal_slist(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
 
     *(bool_t*)pv_output = slist_not_equal((slist_t*)cpv_first, (slist_t*)cpv_second);
 }
+*/
 
 void fun_not_equal_queue(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
@@ -1228,13 +1232,14 @@ void fun_greater_list(const void* cpv_first, const void* cpv_second, void* pv_ou
     *(bool_t*)pv_output = list_greater((list_t*)cpv_first, (list_t*)cpv_second);
 }
 
+/* 
 void fun_greater_slist(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
 
     *(bool_t*)pv_output = slist_greater((slist_t*)cpv_first, (slist_t*)cpv_second);
 }
-
+*/
 void fun_greater_queue(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1473,13 +1478,14 @@ void fun_greater_equal_list(const void* cpv_first, const void* cpv_second, void*
     *(bool_t*)pv_output = list_greater_equal((list_t*)cpv_first, (list_t*)cpv_second);
 }
 
+/*  
 void fun_greater_equal_slist(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
 
     *(bool_t*)pv_output = slist_greater_equal((slist_t*)cpv_first, (slist_t*)cpv_second);
 }
-
+*/
 void fun_greater_equal_queue(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1719,13 +1725,14 @@ void fun_less_list(const void* cpv_first, const void* cpv_second, void* pv_outpu
     *(bool_t*)pv_output = list_less((list_t*)cpv_first, (list_t*)cpv_second);
 }
 
+/*  
 void fun_less_slist(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
 
     *(bool_t*)pv_output = slist_less((slist_t*)cpv_first, (slist_t*)cpv_second);
 }
-
+*/
 void fun_less_queue(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1964,13 +1971,14 @@ void fun_less_equal_list(const void* cpv_first, const void* cpv_second, void* pv
     *(bool_t*)pv_output = list_less_equal((list_t*)cpv_first, (list_t*)cpv_second);
 }
 
+/*  
 void fun_less_equal_slist(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
 
     *(bool_t*)pv_output = slist_less_equal((slist_t*)cpv_first, (slist_t*)cpv_second);
 }
-
+*/
 void fun_less_equal_queue(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);

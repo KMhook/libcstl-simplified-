@@ -48,11 +48,12 @@ extern "C" {
 #define _DEQUE_ITERATOR_CONTAINER(it_iter)              ((deque_t*)((it_iter)._pt_container))
 #define _DEQUE_ITERATOR_CONTAINER_TYPE(it_iter)         ((it_iter)._t_containertype)
 #define _DEQUE_ITERATOR_ITERATOR_TYPE(it_iter)          ((it_iter)._t_iteratortype)
-/* slist iterator handler */
+/* slist iterator handler 
 #define _SLIST_ITERATOR_COREPOS(it_iter)                ((it_iter)._t_pos._pby_corepos)
 #define _SLIST_ITERATOR_CONTAINER(it_iter)              ((slist_t*)((it_iter)._pt_container))
 #define _SLIST_ITERATOR_CONTAINER_TYPE(it_iter)         ((it_iter)._t_containertype)
 #define _SLIST_ITERATOR_ITERATOR_TYPE(it_iter)          ((it_iter)._t_iteratortype)
+*/
 /* avl_tree iterator handler */
 #define _AVL_TREE_ITERATOR_COREPOS(it_iter)             ((it_iter)._t_pos._t_treepos._pby_corepos)
 #define _AVL_TREE_ITERATOR_TREE(it_iter)                ((_avl_tree_t*)((it_iter)._t_pos._t_treepos._pt_tree))
@@ -117,7 +118,7 @@ typedef enum _tagcontainertype
     _VECTOR_CONTAINER,
     _LIST_CONTAINER,
     _DEQUE_CONTAINER,
-    _SLIST_CONTAINER,
+   // _SLIST_CONTAINER,
     _MAP_CONTAINER,
     _MULTIMAP_CONTAINER,
     _SET_CONTAINER,

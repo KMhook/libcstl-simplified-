@@ -56,7 +56,7 @@
 #define _TOKEN_TEXT_UNION                          "union"
 #define _TOKEN_TEXT_VECTOR                         "vector_t"
 #define _TOKEN_TEXT_LIST                           "list_t"
-#define _TOKEN_TEXT_SLIST                          "slist_t"
+//#define _TOKEN_TEXT_SLIST                          "slist_t"
 #define _TOKEN_TEXT_DEQUE                          "deque_t"
 #define _TOKEN_TEXT_STACK                          "stack_t"
 #define _TOKEN_TEXT_QUEUE                          "queue_t"
@@ -72,7 +72,7 @@
 #define _TOKEN_TEXT_ITERATOR                       "iterator_t"
 #define _TOKEN_TEXT_VECTOR_ITERATOR                "vector_iterator_t"
 #define _TOKEN_TEXT_LIST_ITERATOR                  "list_iterator_t"
-#define _TOKEN_TEXT_SLIST_ITERATOR                 "slist_iterator_t"
+//#define _TOKEN_TEXT_SLIST_ITERATOR                 "slist_iterator_t"
 #define _TOKEN_TEXT_DEQUE_ITERATOR                 "deque_iterator_t"
 #define _TOKEN_TEXT_SET_ITERATOR                   "set_iterator_t"
 #define _TOKEN_TEXT_MAP_ITERATOR                   "map_iterator_t"
@@ -129,7 +129,7 @@ static keytable_t _sgt_table[] = {
     {_TOKEN_KEY_UNION,                  _TOKEN_TEXT_UNION},
     {_TOKEN_KEY_VECTOR,                 _TOKEN_TEXT_VECTOR},
     {_TOKEN_KEY_LIST,                   _TOKEN_TEXT_LIST},
-    {_TOKEN_KEY_SLIST,                  _TOKEN_TEXT_SLIST},
+//    {_TOKEN_KEY_SLIST,                  _TOKEN_TEXT_SLIST},
     {_TOKEN_KEY_DEQUE,                  _TOKEN_TEXT_DEQUE},
     {_TOKEN_KEY_STACK,                  _TOKEN_TEXT_STACK},
     {_TOKEN_KEY_QUEUE,                  _TOKEN_TEXT_QUEUE},
@@ -145,7 +145,7 @@ static keytable_t _sgt_table[] = {
     {_TOKEN_KEY_ITERATOR,               _TOKEN_TEXT_ITERATOR},
     {_TOKEN_KEY_VECTOR_ITERATOR,        _TOKEN_TEXT_VECTOR_ITERATOR},
     {_TOKEN_KEY_LIST_ITERATOR,          _TOKEN_TEXT_LIST_ITERATOR},
-    {_TOKEN_KEY_SLIST_ITERATOR,         _TOKEN_TEXT_SLIST_ITERATOR},
+ //   {_TOKEN_KEY_SLIST_ITERATOR,         _TOKEN_TEXT_SLIST_ITERATOR},
     {_TOKEN_KEY_DEQUE_ITERATOR,         _TOKEN_TEXT_DEQUE_ITERATOR},
     {_TOKEN_KEY_SET_ITERATOR,           _TOKEN_TEXT_SET_ITERATOR},
     {_TOKEN_KEY_MAP_ITERATOR,           _TOKEN_TEXT_MAP_ITERATOR},
@@ -225,7 +225,7 @@ _typestyle_t _type_get_style(const char* s_typename, char* s_formalname)
         /* TYPE_DESCRIPT -> CSTL_BUILTIN */
         case _TOKEN_KEY_VECTOR:
         case _TOKEN_KEY_LIST:
-        case _TOKEN_KEY_SLIST:
+//        case _TOKEN_KEY_SLIST:
         case _TOKEN_KEY_DEQUE:
         case _TOKEN_KEY_STACK:
         case _TOKEN_KEY_QUEUE:
@@ -241,7 +241,7 @@ _typestyle_t _type_get_style(const char* s_typename, char* s_formalname)
         case _TOKEN_KEY_ITERATOR:
         case _TOKEN_KEY_VECTOR_ITERATOR:
         case _TOKEN_KEY_LIST_ITERATOR:
-        case _TOKEN_KEY_SLIST_ITERATOR:
+//       case _TOKEN_KEY_SLIST_ITERATOR:
         case _TOKEN_KEY_DEQUE_ITERATOR:
         case _TOKEN_KEY_SET_ITERATOR:
         case _TOKEN_KEY_MAP_ITERATOR:
@@ -738,10 +738,12 @@ bool_t _type_parse_sequence_name(char* s_formalname)
             _TOKEN_MATCH(_TOKEN_TEXT_LIST, s_formalname);
             return true;
             break;
+			 /*  
         case _TOKEN_KEY_SLIST:
             _TOKEN_MATCH(_TOKEN_TEXT_SLIST, s_formalname);
             return true;
             break;
+						*/
         case _TOKEN_KEY_DEQUE:
             _TOKEN_MATCH(_TOKEN_TEXT_DEQUE, s_formalname);
             return true;
@@ -853,10 +855,12 @@ bool_t _type_parse_iterator(char* s_formalname)
             _TOKEN_MATCH(_TOKEN_TEXT_LIST_ITERATOR, s_formalname);
             return true;
             break;
+						/*  
         case _TOKEN_KEY_SLIST_ITERATOR:
             _TOKEN_MATCH(_TOKEN_TEXT_SLIST_ITERATOR, s_formalname);
             return true;
             break;
+						*/
         case _TOKEN_KEY_DEQUE_ITERATOR:
             _TOKEN_MATCH(_TOKEN_TEXT_DEQUE_ITERATOR, s_formalname);
             return true;
@@ -958,7 +962,7 @@ bool_t _type_parse_cstl_builtin(char* s_formalname)
         /* CSTL_BUILTIN -> SEQUENCE */
         case _TOKEN_KEY_VECTOR:
         case _TOKEN_KEY_LIST:
-        case _TOKEN_KEY_SLIST:
+        //case _TOKEN_KEY_SLIST:
         case _TOKEN_KEY_DEQUE:
         case _TOKEN_KEY_STACK:
         case _TOKEN_KEY_QUEUE:
@@ -988,7 +992,7 @@ bool_t _type_parse_cstl_builtin(char* s_formalname)
         case _TOKEN_KEY_ITERATOR:
         case _TOKEN_KEY_VECTOR_ITERATOR:
         case _TOKEN_KEY_LIST_ITERATOR:
-        case _TOKEN_KEY_SLIST_ITERATOR:
+        //case _TOKEN_KEY_SLIST_ITERATOR:
         case _TOKEN_KEY_DEQUE_ITERATOR:
         case _TOKEN_KEY_SET_ITERATOR:
         case _TOKEN_KEY_MAP_ITERATOR:
@@ -1047,7 +1051,7 @@ bool_t _type_parse_type_descript(char* s_formalname)
         /* TYPE_DESCRIPT -> CSTL_BUILTIN */
         case _TOKEN_KEY_VECTOR:
         case _TOKEN_KEY_LIST:
-        case _TOKEN_KEY_SLIST:
+        //case _TOKEN_KEY_SLIST:
         case _TOKEN_KEY_DEQUE:
         case _TOKEN_KEY_STACK:
         case _TOKEN_KEY_QUEUE:
@@ -1063,7 +1067,7 @@ bool_t _type_parse_type_descript(char* s_formalname)
         case _TOKEN_KEY_ITERATOR:
         case _TOKEN_KEY_VECTOR_ITERATOR:
         case _TOKEN_KEY_LIST_ITERATOR:
-        case _TOKEN_KEY_SLIST_ITERATOR:
+        //case _TOKEN_KEY_SLIST_ITERATOR:
         case _TOKEN_KEY_DEQUE_ITERATOR:
         case _TOKEN_KEY_SET_ITERATOR:
         case _TOKEN_KEY_MAP_ITERATOR:

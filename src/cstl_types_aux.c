@@ -27,7 +27,7 @@
 
 #include <cstl/cvector.h>
 #include <cstl/clist.h>
-#include <cstl/cslist.h>
+//#include <cstl/cslist.h>
 #include <cstl/cdeque.h>
 #include <cstl/cstack.h>
 #include <cstl/cqueue.h>
@@ -280,9 +280,10 @@ void _type_register_cstl_builtin(void)
     /* register list_t */
     _TYPE_REGISTER_TYPE(list_t, _LIST_TYPE, list, _TYPE_CSTL_BUILTIN);
     _TYPE_REGISTER_TYPE_NODE(list_t, _LIST_TYPE);
-    /* register slist_t */
+    /* register slist_t 
     _TYPE_REGISTER_TYPE(slist_t, _SLIST_TYPE, slist, _TYPE_CSTL_BUILTIN);
     _TYPE_REGISTER_TYPE_NODE(slist_t, _SLIST_TYPE);
+		*/
     /* register deque_t */
     _TYPE_REGISTER_TYPE(deque_t, _DEQUE_TYPE, deque, _TYPE_CSTL_BUILTIN);
     _TYPE_REGISTER_TYPE_NODE(deque_t, _DEQUE_TYPE);
@@ -325,7 +326,7 @@ void _type_register_cstl_builtin(void)
     _TYPE_REGISTER_TYPE_NODE(iterator_t, _ITERATOR_TYPE);
     _TYPE_REGISTER_TYPE_NODE(vector_iterator_t, _VECTOR_ITERATOR_TYPE);
     _TYPE_REGISTER_TYPE_NODE(list_iterator_t, _LIST_ITERATOR_TYPE);
-    _TYPE_REGISTER_TYPE_NODE(slist_iterator_t, _SLIST_ITERATOR_TYPE);
+    //_TYPE_REGISTER_TYPE_NODE(slist_iterator_t, _SLIST_ITERATOR_TYPE);
     _TYPE_REGISTER_TYPE_NODE(deque_iterator_t, _DEQUE_ITERATOR_TYPE);
     _TYPE_REGISTER_TYPE_NODE(set_iterator_t, _SET_ITERATOR_TYPE);
     _TYPE_REGISTER_TYPE_NODE(map_iterator_t, _MAP_ITERATOR_TYPE);
