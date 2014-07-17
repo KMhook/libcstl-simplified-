@@ -330,8 +330,8 @@ void _hashtable_hash_auxiliary(const _hashtable_t* cpt_hashtable, const void* cp
     assert(_hashtable_is_inited(cpt_hashtable));
 
     if (strncmp(_GET_HASHTABLE_TYPE_NAME(cpt_hashtable), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
-        *(size_t*)pv_output = strlen(string_c_str((string_t*)cpv_input));
-        cpt_hashtable->_ufun_hash(string_c_str((string_t*)cpv_input), pv_output);
+        *(size_t*)pv_output = strlen(basic_string_c_str((basic_string_t*)cpv_input));
+        cpt_hashtable->_ufun_hash(basic_string_c_str((basic_string_t*)cpv_input), pv_output);
     } else {
         cpt_hashtable->_ufun_hash(cpv_input, pv_output);
     } 
@@ -351,7 +351,7 @@ void _hashtable_elem_compare_auxiliary(
 
     if (strncmp(_GET_HASHTABLE_TYPE_NAME(cpt_hashtable), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0 &&
         cpt_hashtable->_bfun_compare != _GET_HASHTABLE_TYPE_LESS_FUNCTION(cpt_hashtable)) {
-        cpt_hashtable->_bfun_compare(string_c_str((string_t*)cpv_first), string_c_str((string_t*)cpv_second), pv_output);
+        cpt_hashtable->_bfun_compare(basic_string_c_str((basic_string_t*)cpv_first), basic_string_c_str((basic_string_t*)cpv_second), pv_output);
     } else {
         cpt_hashtable->_bfun_compare(cpv_first, cpv_second, pv_output);
     }

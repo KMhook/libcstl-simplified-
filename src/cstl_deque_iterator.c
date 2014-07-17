@@ -150,7 +150,7 @@ void _deque_iterator_get_value(deque_iterator_t it_iter, void* pv_value)
 
     /* char* */
     if (strncmp(_GET_DEQUE_TYPE_BASENAME(_DEQUE_ITERATOR_CONTAINER(it_iter)), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
-        *(char**)pv_value = (char*)string_c_str((string_t*)_deque_iterator_get_pointer_auxiliary(it_iter));
+        *(char**)pv_value = (char*)basic_string_c_str((basic_string_t*)_deque_iterator_get_pointer_auxiliary(it_iter));
     } else {
         b_result = _GET_DEQUE_TYPE_SIZE(_DEQUE_ITERATOR_CONTAINER(it_iter));
         _GET_DEQUE_TYPE_COPY_FUNCTION(_DEQUE_ITERATOR_CONTAINER(it_iter))(
@@ -172,7 +172,7 @@ void _deque_iterator_set_value(deque_iterator_t it_iter, const void* cpv_value)
 
     /* char* */
     if (strncmp(_GET_DEQUE_TYPE_BASENAME(_DEQUE_ITERATOR_CONTAINER(it_iter)), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
-        string_assign_cstr((string_t*)_deque_iterator_get_pointer_auxiliary(it_iter), (char*)cpv_value);
+        basic_string_assign_cstr((basic_string_t*)_deque_iterator_get_pointer_auxiliary(it_iter), (char*)cpv_value);
     } else {
         b_result = _GET_DEQUE_TYPE_SIZE(_DEQUE_ITERATOR_CONTAINER(it_iter));
         _GET_DEQUE_TYPE_COPY_FUNCTION(_DEQUE_ITERATOR_CONTAINER(it_iter))(
@@ -191,7 +191,7 @@ const void* _deque_iterator_get_pointer(deque_iterator_t it_iter)
 
     /* char* */
     if (strncmp(_GET_DEQUE_TYPE_BASENAME(_DEQUE_ITERATOR_CONTAINER(it_iter)), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
-        return string_c_str((string_t*)_deque_iterator_get_pointer_auxiliary(it_iter));
+        return basic_string_c_str((basic_string_t*)_deque_iterator_get_pointer_auxiliary(it_iter));
     } else {
         return _deque_iterator_get_pointer_auxiliary(it_iter);
     }

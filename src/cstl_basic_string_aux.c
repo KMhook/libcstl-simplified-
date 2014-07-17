@@ -431,13 +431,13 @@ void _basic_string_copy_subcstr_auxiliary(
             n_dest_terminator = memcmp(pby_terminator, pby_dest + i * t_typesize, t_typesize);
 
             if (n_dest_terminator != 0 && *((char**)cpv_value_string + i) != NULL) {
-                string_assign_cstr((string_t*)(pby_dest + i * t_typesize), *((char**)cpv_value_string + i));
+                basic_string_assign_cstr((basic_string_t*)(pby_dest + i * t_typesize), *((char**)cpv_value_string + i));
             } else if (n_dest_terminator != 0 && *((char**)cpv_value_string + i) == NULL) {
-                _string_destroy_auxiliary((string_t*)(pby_dest + i * t_typesize));
+                _basic_string_destroy_auxiliary((basic_string_t*)(pby_dest + i * t_typesize));
                 memcpy(pby_dest + i * t_typesize, pby_terminator, t_typesize);
             } else if (n_dest_terminator == 0 && *((char**)cpv_value_string + i) != NULL) {
                 _basic_string_init_elem_auxiliary((basic_string_t*)cpt_basic_string, pby_dest + i * t_typesize);
-                string_assign_cstr((string_t*)(pby_dest + i * t_typesize), *((char**)cpv_value_string + i));
+                basic_string_assign_cstr((basic_string_t*)(pby_dest + i * t_typesize), *((char**)cpv_value_string + i));
             }
         }
     } else if (_GET_BASIC_STRING_TYPE_STYLE(cpt_basic_string) == _TYPE_C_BUILTIN) {
@@ -744,7 +744,7 @@ bool_t _basic_string_value_string_find(
             if (n_string_terminator == 0 && *((char**)cpv_value_string + i) == NULL) {
                 return true;
             } else if (n_string_terminator != 0 && *((_byte_t**)cpv_value_string + i) != NULL) {
-                if (string_equal_cstr((string_t*)pby_string, *((char**)cpv_value_string + i))) {
+                if (basic_string_equal_cstr((basic_string_t*)pby_string, *((char**)cpv_value_string + i))) {
                     return true;
                 }
             }

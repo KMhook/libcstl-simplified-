@@ -262,11 +262,13 @@ static inline bool_t _type_cstl_builtin_special(const char* s_typename)
                 b_result = true;
             }
             break;
+						/*  
         case 8:
             if (strncmp(s_typename, _STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
                 b_result = true;
             }
             break;
+*/
         case 10:
             if (strncmp(s_typename, _ITERATOR_TYPE, _TYPE_NAME_SIZE) == 0) {
                 b_result = true;
@@ -598,10 +600,11 @@ void _type_get_varg_value(_typeinfo_t* pt_typeinfo, va_list val_elemlist, void* 
         } else if (strncmp(pt_typeinfo->_pt_type->_s_typename, _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
             /* char* */
             char* s_str = va_arg(val_elemlist, char*);
-            assert(pt_typeinfo->_pt_type->_t_typesize == sizeof(string_t));
+            //assert(pt_typeinfo->_pt_type->_t_typesize == sizeof(string_t));
 
+            assert(pt_typeinfo->_pt_type->_t_typesize == sizeof(basic_string_t));
             if (s_str != NULL) {
-                string_assign_cstr((string_t*)pv_output, s_str);
+                basic_string_assign_cstr((basic_string_t*)pv_output, s_str);
             } else {
                 bool_t b_result = pt_typeinfo->_pt_type->_t_typesize;
                 (*pt_typeinfo->_pt_type->_t_typedestroy)(pv_output, &b_result);

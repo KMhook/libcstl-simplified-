@@ -1050,7 +1050,7 @@ void _rb_tree_elem_compare_auxiliary(
 
     if (strncmp(_GET_RB_TREE_TYPE_BASENAME(cpt_rb_tree), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0 &&
         cpt_rb_tree->_t_compare != _GET_RB_TREE_TYPE_LESS_FUNCTION(cpt_rb_tree)) {
-        cpt_rb_tree->_t_compare(string_c_str((string_t*)cpv_first), string_c_str((string_t*)cpv_second), pv_output);
+        cpt_rb_tree->_t_compare(basic_string_c_str((basic_string_t*)cpv_first), basic_string_c_str((basic_string_t*)cpv_second), pv_output);
     } else {
         cpt_rb_tree->_t_compare(cpv_first, cpv_second, pv_output);
     }

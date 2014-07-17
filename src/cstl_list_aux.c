@@ -269,8 +269,8 @@ void _list_quick_sort(list_t* plist_list, _listnode_t* pt_first, _listnode_t* pt
             for (pt_pivot = pt_last, pt_before = pt_first->_pt_prev, pt_after = pt_first;
                  pt_after != pt_pivot;
                  pt_after = pt_after->_pt_next) {
-                (*bfun_op)(string_c_str((string_t*)pt_after->_pby_data), string_c_str((string_t*)pt_pivot->_pby_data), &b_less);
-                (*bfun_op)(string_c_str((string_t*)pt_pivot->_pby_data), string_c_str((string_t*)pt_after->_pby_data), &b_greater);
+                (*bfun_op)(basic_string_c_str((basic_string_t*)pt_after->_pby_data), basic_string_c_str((basic_string_t*)pt_pivot->_pby_data), &b_less);
+                (*bfun_op)(basic_string_c_str((basic_string_t*)pt_pivot->_pby_data), basic_string_c_str((basic_string_t*)pt_after->_pby_data), &b_greater);
                 if (b_less || (!b_less && !b_greater)) {
                     pt_before = pt_before->_pt_next;
                     _list_swap_node(&pt_before, &pt_after);

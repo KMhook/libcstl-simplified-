@@ -195,20 +195,20 @@ void list_init_copy_array(list_t* plist_list, const void* cpv_array, size_t t_co
         /*
          * We need built a string_t for c string element.
          */
-        string_t* pstr_elem = create_string();
+        basic_string_t* pstr_elem = create_basic_string("char");
         assert(pstr_elem != NULL);
-        string_init(pstr_elem);
+        basic_string_init(pstr_elem);
 
         for (it_dest = it_begin, i = 0;
              !iterator_equal(it_dest, it_end) && i < t_count;
              it_dest = iterator_next(it_dest), ++i) {
-            string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
+            basic_string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
             b_result = _GET_LIST_TYPE_SIZE(plist_list);
             _GET_LIST_TYPE_COPY_FUNCTION(plist_list)(
                 _iterator_get_pointer_ignore_cstr(it_dest), pstr_elem, &b_result);
             assert(b_result);
         }
-        string_destroy(pstr_elem);
+        basic_string_destroy(pstr_elem);
     } else if (_GET_LIST_TYPE_STYLE(plist_list) == _TYPE_C_BUILTIN) {
         for (it_dest = it_begin, i = 0;
              !iterator_equal(it_dest, it_end) && i < t_count;
@@ -465,20 +465,20 @@ void list_assign_array(list_t* plist_list, const void* cpv_array, size_t t_count
         /*
          * We need built a string_t for c string element.
          */
-        string_t* pstr_elem = create_string();
+        basic_string_t* pstr_elem = create_basic_string("char");
         assert(pstr_elem != NULL);
-        string_init(pstr_elem);
+        basic_string_init(pstr_elem);
 
         for (it_dest = it_begin, i = 0;
              !iterator_equal(it_dest, it_end) && i < t_count;
              it_dest = iterator_next(it_dest), ++i) {
-            string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
+            basic_string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
             b_result = _GET_LIST_TYPE_SIZE(plist_list);
             _GET_LIST_TYPE_COPY_FUNCTION(plist_list)(
                 _iterator_get_pointer_ignore_cstr(it_dest), pstr_elem, &b_result);
             assert(b_result);
         }
-        string_destroy(pstr_elem);
+        basic_string_destroy(pstr_elem);
     } else if (_GET_LIST_TYPE_STYLE(plist_list) == _TYPE_C_BUILTIN) {
         for (it_dest = it_begin, i = 0;
              !iterator_equal(it_dest, it_end) && i < t_count;
@@ -687,11 +687,11 @@ void list_insert_array(list_t* plist_list, list_iterator_t it_pos, const void* c
         /*
          * We need built a string_t for c string element.
          */
-        string_t* pstr_elem = create_string();
+        basic_string_t* pstr_elem = create_basic_string("char");
         assert(pstr_elem != NULL);
-        string_init(pstr_elem);
+        basic_string_init(pstr_elem);
         for (i = 0; i < t_count; ++i) {
-            string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
+            basic_string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
             pt_node = _alloc_allocate(&plist_list->_t_allocator, _LIST_NODE_SIZE(_GET_LIST_TYPE_SIZE(plist_list)), 1);
             assert(pt_node != NULL);
 
@@ -712,7 +712,7 @@ void list_insert_array(list_t* plist_list, list_iterator_t it_pos, const void* c
             }
             pt_node = NULL;
         }
-        string_destroy(pstr_elem);
+        basic_string_destroy(pstr_elem);
     } else if (_GET_LIST_TYPE_STYLE(plist_list) == _TYPE_C_BUILTIN) {
         for (i = 0; i < t_count; ++i) {
             pt_node = _alloc_allocate(&plist_list->_t_allocator, _LIST_NODE_SIZE(_GET_LIST_TYPE_SIZE(plist_list)), 1);

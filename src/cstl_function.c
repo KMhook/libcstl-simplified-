@@ -755,13 +755,14 @@ void fun_equal_stack(const void* cpv_first, const void* cpv_second, void* pv_out
     *(bool_t*)pv_output = stack_equal((stack_t*)cpv_first, (stack_t*)cpv_second);
 }
 
+/*  
 void fun_equal_string(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
 
     *(bool_t*)pv_output = string_equal((string_t*)cpv_first, (string_t*)cpv_second);
 }
-
+*/
 void fun_equal_pair(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1008,13 +1009,14 @@ void fun_not_equal_stack(const void* cpv_first, const void* cpv_second, void* pv
     *(bool_t*)pv_output = stack_not_equal((stack_t*)cpv_first, (stack_t*)cpv_second);
 }
 
+/*  
 void fun_not_equal_string(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
 
     *(bool_t*)pv_output = string_not_equal((string_t*)cpv_first, (string_t*)cpv_second);
 }
-
+*/
 void fun_not_equal_pair(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1254,13 +1256,14 @@ void fun_greater_stack(const void* cpv_first, const void* cpv_second, void* pv_o
     *(bool_t*)pv_output = stack_greater((stack_t*)cpv_first, (stack_t*)cpv_second);
 }
 
+/*  
 void fun_greater_string(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
 
     *(bool_t*)pv_output = string_greater((string_t*)cpv_first, (string_t*)cpv_second);
 }
-
+*/
 void fun_greater_pair(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1500,13 +1503,14 @@ void fun_greater_equal_stack(const void* cpv_first, const void* cpv_second, void
     *(bool_t*)pv_output = stack_greater_equal((stack_t*)cpv_first, (stack_t*)cpv_second);
 }
 
+/*  
 void fun_greater_equal_string(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
 
     *(bool_t*)pv_output = string_greater_equal((string_t*)cpv_first, (string_t*)cpv_second);
 }
-
+*/
 void fun_greater_equal_pair(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1747,13 +1751,14 @@ void fun_less_stack(const void* cpv_first, const void* cpv_second, void* pv_outp
     *(bool_t*)pv_output = stack_less((stack_t*)cpv_first, (stack_t*)cpv_second);
 }
 
+/*  
 void fun_less_string(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
 
     *(bool_t*)pv_output = string_less((string_t*)cpv_first, (string_t*)cpv_second);
 }
-
+*/
 void fun_less_pair(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -1993,6 +1998,7 @@ void fun_less_equal_stack(const void* cpv_first, const void* cpv_second, void* p
     *(bool_t*)pv_output = stack_less_equal((stack_t*)cpv_first, (stack_t*)cpv_second);
 }
 
+/*  
 void fun_less_equal_string(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
@@ -2000,6 +2006,7 @@ void fun_less_equal_string(const void* cpv_first, const void* cpv_second, void* 
     *(bool_t*)pv_output = string_less_equal((string_t*)cpv_first, (string_t*)cpv_second);
 }
 
+*/
 void fun_less_equal_pair(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);

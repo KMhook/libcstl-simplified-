@@ -382,7 +382,7 @@ void* _map_at_varg(map_t* pmap_map, va_list val_elemlist)
 
     /* char* */
     if (strncmp(_GET_MAP_SECOND_TYPE_BASENAME(pmap_map), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
-        return (char*)string_c_str((string_t*)((pair_t*)iterator_get_pointer(it_iter))->_pv_second);
+        return (char*)basic_string_c_str((basic_string_t*)((pair_t*)iterator_get_pointer(it_iter))->_pv_second);
     } else {
         return ((pair_t*)iterator_get_pointer(it_iter))->_pv_second;
     }

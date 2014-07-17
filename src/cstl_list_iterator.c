@@ -68,7 +68,7 @@ void _list_iterator_get_value(list_iterator_t it_iter, void* pv_value)
 
     /* char* */
     if (strncmp(_GET_LIST_TYPE_BASENAME(_LIST_ITERATOR_CONTAINER(it_iter)), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
-        *(char**)pv_value = (char*)string_c_str((string_t*)((_listnode_t*)_LIST_ITERATOR_COREPOS(it_iter))->_pby_data);
+        *(char**)pv_value = (char*)basic_string_c_str((basic_string_t*)((_listnode_t*)_LIST_ITERATOR_COREPOS(it_iter))->_pby_data);
     } else {
         bool_t b_result = _GET_LIST_TYPE_SIZE(_LIST_ITERATOR_CONTAINER(it_iter));
         _GET_LIST_TYPE_COPY_FUNCTION(_LIST_ITERATOR_CONTAINER(it_iter))(
@@ -88,7 +88,7 @@ void _list_iterator_set_value(list_iterator_t it_iter, const void* cpv_value)
 
     /* char* */
     if (strncmp(_GET_LIST_TYPE_BASENAME(_LIST_ITERATOR_CONTAINER(it_iter)), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
-        string_assign_cstr((string_t*)((_listnode_t*)_LIST_ITERATOR_COREPOS(it_iter))->_pby_data, (char*)cpv_value);
+        basic_string_assign_cstr((basic_string_t*)((_listnode_t*)_LIST_ITERATOR_COREPOS(it_iter))->_pby_data, (char*)cpv_value);
     } else {
         bool_t b_result = _GET_LIST_TYPE_SIZE(_LIST_ITERATOR_CONTAINER(it_iter));
         _GET_LIST_TYPE_COPY_FUNCTION(_LIST_ITERATOR_CONTAINER(it_iter))(
@@ -107,7 +107,7 @@ const void* _list_iterator_get_pointer(list_iterator_t it_iter)
 
     /* char* */
     if (strncmp(_GET_LIST_TYPE_BASENAME(_LIST_ITERATOR_CONTAINER(it_iter)), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
-        return string_c_str((string_t*)((_listnode_t*)_LIST_ITERATOR_COREPOS(it_iter))->_pby_data);
+        return basic_string_c_str((basic_string_t*)((_listnode_t*)_LIST_ITERATOR_COREPOS(it_iter))->_pby_data);
     } else {
         return ((_listnode_t*)_LIST_ITERATOR_COREPOS(it_iter))->_pby_data;
     }

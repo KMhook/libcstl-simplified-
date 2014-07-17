@@ -37,9 +37,11 @@ extern "C" {
 #include <cstl/cstl_basic_string_iterator.h>
 #include <cstl/cstl_basic_string_private.h>
 #include <cstl/cstl_basic_string.h>
+	/*
 #include <cstl/cstl_string_iterator.h>
 #include <cstl/cstl_string_private.h>
 #include <cstl/cstl_string.h>
+*/
 
 /** constant declaration and macro section **/
 

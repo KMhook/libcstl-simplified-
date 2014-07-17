@@ -93,7 +93,7 @@ void _basic_string_iterator_get_value(basic_string_iterator_t it_iter, void* pv_
     /* char* */
     if (strncmp(_GET_BASIC_STRING_TYPE_BASENAME(pt_basic_string), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
         if (memcmp(pby_terminator, _BASIC_STRING_ITERATOR_COREPOS(it_iter), t_typesize) != 0) {
-            *(char**)pv_value = (char*)string_c_str((string_t*)_BASIC_STRING_ITERATOR_COREPOS(it_iter));
+            *(char**)pv_value = (char*)basic_string_c_str((basic_string_t*)_BASIC_STRING_ITERATOR_COREPOS(it_iter));
         } else {
             *(char**)pv_value = NULL;
         }
@@ -154,7 +154,7 @@ const void* _basic_string_iterator_get_pointer(basic_string_iterator_t it_iter)
         if (memcmp(pby_terminator, _BASIC_STRING_ITERATOR_COREPOS(it_iter), t_typesize) == 0) {
             return NULL;
         } else {
-            return string_c_str((string_t*)_BASIC_STRING_ITERATOR_COREPOS(it_iter));
+            return basic_string_c_str((basic_string_t*)_BASIC_STRING_ITERATOR_COREPOS(it_iter));
         }
     } else {
         return _BASIC_STRING_ITERATOR_COREPOS(it_iter);

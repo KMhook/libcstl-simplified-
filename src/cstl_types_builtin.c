@@ -404,29 +404,34 @@ void _type_init_cstr(const void* cpv_input, void* pv_output)
 
     assert(cpv_input != NULL && pv_output != NULL);
 
-    b_result = _create_string_auxiliary((string_t*)cpv_input);
+    b_result = _create_basic_string_auxiliary((basic_string_t*)cpv_input, "char");
+    //b_result = _create_string_auxiliary((string_t*)cpv_input);
     assert(b_result);
-    string_init((string_t*)cpv_input);
+    basic_string_init((basic_string_t*)cpv_input);
+    //string_init((string_t*)cpv_input);
     *(bool_t*)pv_output = true;
 }
 
 void _type_copy_cstr(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
-    string_assign((string_t*)cpv_first, (string_t*)cpv_second);
+    basic_string_assign((basic_string_t*)cpv_first, (basic_string_t*)cpv_second);
+    //string_assign((string_t*)cpv_first, (string_t*)cpv_second);
     *(bool_t*)pv_output = true;
 }
 
 void _type_less_cstr(const void* cpv_first, const void* cpv_second, void* pv_output)
 {
     assert(cpv_first != NULL && cpv_second != NULL && pv_output != NULL);
-    *(bool_t*)pv_output = string_less((string_t*)cpv_first, (string_t*)cpv_second);
+    *(bool_t*)pv_output = basic_string_less((basic_string_t*)cpv_first, (basic_string_t*)cpv_second);
+    //*(bool_t*)pv_output = string_less((string_t*)cpv_first, (string_t*)cpv_second);
 }
 
 void _type_destroy_cstr(const void* cpv_input, void* pv_output)
 {
     assert(cpv_input != NULL && pv_output != NULL);
-    _string_destroy_auxiliary((string_t*)cpv_input);
+    _basic_string_destroy_auxiliary((basic_string_t*)cpv_input);
+    //_string_destroy_auxiliary((string_t*)cpv_input);
     *(bool_t*)pv_output = true;
 }
 
@@ -812,7 +817,7 @@ void _type_destroy_pair(const void* cpv_input, void* pv_output)
     *(bool_t*)pv_output = true;
 }
 
-/* string_t */
+/* string_t 
 void _type_init_string(const void* cpv_input, void* pv_output)
 {
     void* pv_avoidwarning = NULL;
@@ -843,7 +848,7 @@ void _type_destroy_string(const void* cpv_input, void* pv_output)
     _string_destroy_auxiliary((string_t*)cpv_input);
     *(bool_t*)pv_output = true;
 }
-
+*/
 /* basic_string_t */
 void _type_init_basic_string(const void* cpv_input, void* pv_output)
 {

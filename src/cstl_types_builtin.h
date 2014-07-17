@@ -203,11 +203,12 @@ extern void _type_init_pair(const void* cpv_input, void* pv_output);
 extern void _type_copy_pair(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_less_pair(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_destroy_pair(const void* cpv_input, void* pv_output);
-/* string_t */
+/* string_t 
 extern void _type_init_string(const void* cpv_input, void* pv_output);
 extern void _type_copy_string(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_less_string(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_destroy_string(const void* cpv_input, void* pv_output);
+*/
 /* iterator_t */
 extern void _type_init_iterator(const void* cpv_input, void* pv_output);
 extern void _type_copy_iterator(const void* cpv_first, const void* cpv_second, void* pv_output);

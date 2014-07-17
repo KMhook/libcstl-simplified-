@@ -152,20 +152,20 @@ void vector_init_copy_array(vector_t* pvec_dest, const void* cpv_array, size_t t
         /*
          * We need built a string_t for c string element.
          */
-        string_t* pstr_elem = create_string();
+        basic_string_t* pstr_elem = create_basic_string("char");
         assert(pstr_elem != NULL);
-        string_init(pstr_elem);
+        basic_string_init(pstr_elem);
 
         for (it_dest = it_begin, i = 0;
              !iterator_equal(it_dest, it_end) && i < t_count;
              it_dest = iterator_next(it_dest), ++i) {
-            string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
+            basic_string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
             b_result = _GET_VECTOR_TYPE_SIZE(pvec_dest);
             _GET_VECTOR_TYPE_COPY_FUNCTION(pvec_dest)(
                 _iterator_get_pointer_ignore_cstr(it_dest), pstr_elem, &b_result);
             assert(b_result);
         }
-        string_destroy(pstr_elem);
+        basic_string_destroy(pstr_elem);
     } else if (_GET_VECTOR_TYPE_STYLE(pvec_dest) == _TYPE_C_BUILTIN) {
         for (it_dest = it_begin, i = 0;
              !iterator_equal(it_dest, it_end) && i < t_count;
@@ -519,20 +519,20 @@ void vector_assign_array(vector_t* pvec_vector, const void* cpv_array, size_t t_
         /*
          * We need built a string_t for c string element.
          */
-        string_t* pstr_elem = create_string();
+        basic_string_t* pstr_elem = create_basic_string("char");
         assert(pstr_elem != NULL);
-        string_init(pstr_elem);
+        basic_string_init(pstr_elem);
 
         for (it_dest = it_begin, i = 0;
              !iterator_equal(it_dest, it_end) && i < t_count;
              it_dest = iterator_next(it_dest), ++i) {
-            string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
+            basic_string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
             b_result = _GET_VECTOR_TYPE_SIZE(pvec_vector);
             _GET_VECTOR_TYPE_COPY_FUNCTION(pvec_vector)(
                 _iterator_get_pointer_ignore_cstr(it_dest), pstr_elem, &b_result);
             assert(b_result);
         }
-        string_destroy(pstr_elem);
+        basic_string_destroy(pstr_elem);
     } else if (_GET_VECTOR_TYPE_STYLE(pvec_vector) == _TYPE_C_BUILTIN) {
         for (it_dest = it_begin, i = 0;
              !iterator_equal(it_dest, it_end) && i < t_count;
@@ -795,17 +795,17 @@ void vector_insert_array(vector_t* pvec_vector, vector_iterator_t it_pos, const 
             /*
              * We need built a string_t for c string element.
              */
-            string_t* pstr_elem = create_string();
+            basic_string_t* pstr_elem = create_basic_string("char");
             assert(pstr_elem != NULL);
-            string_init(pstr_elem);
+            basic_string_init(pstr_elem);
             for (it_iter = it_pos, i = 0; i < t_count; it_iter = iterator_next(it_iter), ++i) {
-                string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
+                basic_string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
                 b_result = _GET_VECTOR_TYPE_SIZE(pvec_vector);
                 _GET_VECTOR_TYPE_COPY_FUNCTION(pvec_vector)(
                     _iterator_get_pointer_ignore_cstr(it_iter), pstr_elem, &b_result);
                 assert(b_result);
             }
-            string_destroy(pstr_elem);
+            basic_string_destroy(pstr_elem);
         } else if (_GET_VECTOR_TYPE_STYLE(pvec_vector) == _TYPE_C_BUILTIN) {
             for (it_iter = it_pos, i = 0; i < t_count; it_iter = iterator_next(it_iter), ++i) {
                 b_result = _GET_VECTOR_TYPE_SIZE(pvec_vector);

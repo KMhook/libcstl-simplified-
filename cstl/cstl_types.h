@@ -89,7 +89,7 @@ extern "C" {
 #define _MAP_TYPE                       "map_t"
 #define _HASH_SET_TYPE                  "hash_set_t"
 #define _HASH_MAP_TYPE                  "hash_map_t"
-#define _STRING_TYPE                    "string_t"
+//#define _STRING_TYPE                    "string_t"
 #define _PAIR_TYPE                      "pair_t"
 #define _RANGE_TYPE                     "range_t"
 #define _BASIC_STRING_TYPE              "basic_string_t"

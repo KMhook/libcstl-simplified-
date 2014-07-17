@@ -82,7 +82,7 @@ void _rb_tree_iterator_get_value(_rb_tree_iterator_t it_iter, void* pv_value)
 
     /* char* */
     if (strncmp(_GET_RB_TREE_TYPE_BASENAME(_RB_TREE_ITERATOR_TREE(it_iter)), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
-        *(char**)pv_value = (char*)string_c_str((string_t*)((_rbnode_t*)_RB_TREE_ITERATOR_COREPOS(it_iter))->_pby_data);
+        *(char**)pv_value = (char*)basic_string_c_str((basic_string_t*)((_rbnode_t*)_RB_TREE_ITERATOR_COREPOS(it_iter))->_pby_data);
     } else {
         bool_t b_result = _GET_RB_TREE_TYPE_SIZE(_RB_TREE_ITERATOR_TREE(it_iter));
         _GET_RB_TREE_TYPE_COPY_FUNCTION(_RB_TREE_ITERATOR_TREE(it_iter))(
@@ -101,7 +101,7 @@ const void* _rb_tree_iterator_get_pointer(_rb_tree_iterator_t it_iter)
 
     /* char* */
     if (strncmp(_GET_RB_TREE_TYPE_BASENAME(_RB_TREE_ITERATOR_TREE(it_iter)), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
-        return (char*)string_c_str((string_t*)((_rbnode_t*)_RB_TREE_ITERATOR_COREPOS(it_iter))->_pby_data);
+        return (char*)basic_string_c_str((basic_string_t*)((_rbnode_t*)_RB_TREE_ITERATOR_COREPOS(it_iter))->_pby_data);
     } else {
         return ((_rbnode_t*)_RB_TREE_ITERATOR_COREPOS(it_iter))->_pby_data;
     }

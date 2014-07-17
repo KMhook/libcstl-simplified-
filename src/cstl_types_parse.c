@@ -139,7 +139,7 @@ static keytable_t _sgt_table[] = {
     {_TOKEN_KEY_HASH_SET,               _TOKEN_TEXT_HASH_SET},
     {_TOKEN_KEY_HASH_MAP,               _TOKEN_TEXT_HASH_MAP},
     {_TOKEN_KEY_PAIR,                   _TOKEN_TEXT_PAIR},
-    {_TOKEN_KEY_STRING,                 _TOKEN_TEXT_STRING},
+//    {_TOKEN_KEY_STRING,                 _TOKEN_TEXT_STRING},
     {_TOKEN_KEY_RANGE,                  _TOKEN_TEXT_RANGE},
     {_TOKEN_KEY_BASIC_STRING,           _TOKEN_TEXT_BASIC_STRING},
     {_TOKEN_KEY_ITERATOR,               _TOKEN_TEXT_ITERATOR},
@@ -151,7 +151,7 @@ static keytable_t _sgt_table[] = {
     {_TOKEN_KEY_MAP_ITERATOR,           _TOKEN_TEXT_MAP_ITERATOR},
     {_TOKEN_KEY_HASH_SET_ITERATOR,      _TOKEN_TEXT_HASH_SET_ITERATOR},
     {_TOKEN_KEY_HASH_MAP_ITERATOR,      _TOKEN_TEXT_HASH_MAP_ITERATOR},
-    {_TOKEN_KEY_STRING_ITERATOR,        _TOKEN_TEXT_STRING_ITERATOR},
+ //   {_TOKEN_KEY_STRING_ITERATOR,        _TOKEN_TEXT_STRING_ITERATOR},
     {_TOKEN_KEY_INPUT_ITERATOR,         _TOKEN_TEXT_INPUT_ITERATOR},
     {_TOKEN_KEY_OUTPUT_ITERATOR,        _TOKEN_TEXT_OUTPUT_ITERATOR},
     {_TOKEN_KEY_FORWARD_ITERATOR,       _TOKEN_TEXT_FORWARD_ITERATOR},
@@ -235,7 +235,7 @@ _typestyle_t _type_get_style(const char* s_typename, char* s_formalname)
         case _TOKEN_KEY_HASH_SET:
         case _TOKEN_KEY_HASH_MAP:
         case _TOKEN_KEY_PAIR:
-        case _TOKEN_KEY_STRING:
+        //case _TOKEN_KEY_STRING:
         case _TOKEN_KEY_RANGE:
         case _TOKEN_KEY_BASIC_STRING:
         case _TOKEN_KEY_ITERATOR:
@@ -247,7 +247,7 @@ _typestyle_t _type_get_style(const char* s_typename, char* s_formalname)
         case _TOKEN_KEY_MAP_ITERATOR:
         case _TOKEN_KEY_HASH_SET_ITERATOR:
         case _TOKEN_KEY_HASH_MAP_ITERATOR:
-        case _TOKEN_KEY_STRING_ITERATOR:
+       // case _TOKEN_KEY_STRING_ITERATOR:
         case _TOKEN_KEY_INPUT_ITERATOR:
         case _TOKEN_KEY_OUTPUT_ITERATOR:
         case _TOKEN_KEY_FORWARD_ITERATOR:
@@ -883,10 +883,12 @@ bool_t _type_parse_iterator(char* s_formalname)
             _TOKEN_MATCH(_TOKEN_TEXT_HASH_MAP_ITERATOR, s_formalname);
             return true;
             break;
+						/*  
         case _TOKEN_KEY_STRING_ITERATOR:
             _TOKEN_MATCH(_TOKEN_TEXT_STRING_ITERATOR, s_formalname);
             return true;
             break;
+*/
         case _TOKEN_KEY_INPUT_ITERATOR:
             _TOKEN_MATCH(_TOKEN_TEXT_INPUT_ITERATOR, s_formalname);
             return true;
@@ -981,10 +983,12 @@ bool_t _type_parse_cstl_builtin(char* s_formalname)
             return _type_parse_relation(s_formalname);
             break;
         /* CSTL_BUILTIN -> string_t */
+						/*
         case _TOKEN_KEY_STRING:
             _TOKEN_MATCH(_TOKEN_TEXT_STRING, s_formalname);
             return true;
             break;
+						*/
         /* CSTL_BUILTIN -> range_t */
         case _TOKEN_KEY_RANGE:
             _TOKEN_MATCH(_TOKEN_TEXT_RANGE, s_formalname);
@@ -1000,7 +1004,7 @@ bool_t _type_parse_cstl_builtin(char* s_formalname)
         case _TOKEN_KEY_MAP_ITERATOR:
         case _TOKEN_KEY_HASH_SET_ITERATOR:
         case _TOKEN_KEY_HASH_MAP_ITERATOR:
-        case _TOKEN_KEY_STRING_ITERATOR:
+       // case _TOKEN_KEY_STRING_ITERATOR:
         case _TOKEN_KEY_INPUT_ITERATOR:
         case _TOKEN_KEY_OUTPUT_ITERATOR:
         case _TOKEN_KEY_FORWARD_ITERATOR:
@@ -1063,7 +1067,7 @@ bool_t _type_parse_type_descript(char* s_formalname)
         case _TOKEN_KEY_HASH_SET:
         case _TOKEN_KEY_HASH_MAP:
         case _TOKEN_KEY_PAIR:
-        case _TOKEN_KEY_STRING:
+       // case _TOKEN_KEY_STRING:
         case _TOKEN_KEY_RANGE:
         case _TOKEN_KEY_BASIC_STRING:
         case _TOKEN_KEY_ITERATOR:
@@ -1075,7 +1079,7 @@ bool_t _type_parse_type_descript(char* s_formalname)
         case _TOKEN_KEY_MAP_ITERATOR:
         case _TOKEN_KEY_HASH_SET_ITERATOR:
         case _TOKEN_KEY_HASH_MAP_ITERATOR:
-        case _TOKEN_KEY_STRING_ITERATOR:
+       // case _TOKEN_KEY_STRING_ITERATOR:
         case _TOKEN_KEY_INPUT_ITERATOR:
         case _TOKEN_KEY_OUTPUT_ITERATOR:
         case _TOKEN_KEY_FORWARD_ITERATOR:

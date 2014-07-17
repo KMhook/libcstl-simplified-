@@ -245,8 +245,8 @@ void _type_register_c_builtin(void)
     _TYPE_REGISTER_TYPE(bool_t, _CSTL_BOOL_TYPE, cstl_bool, _TYPE_C_BUILTIN);
     _TYPE_REGISTER_TYPE_NODE(bool_t, _CSTL_BOOL_TYPE);
     /* register char* */
-    _TYPE_REGISTER_TYPE(string_t, _C_STRING_TYPE, cstr, _TYPE_C_BUILTIN);
-    _TYPE_REGISTER_TYPE_NODE(string_t, _C_STRING_TYPE);
+    _TYPE_REGISTER_TYPE(basic_string_t, _C_STRING_TYPE, cstr, _TYPE_C_BUILTIN);
+    _TYPE_REGISTER_TYPE_NODE(basic_string_t, _C_STRING_TYPE);
     /* register void* */
     _TYPE_REGISTER_TYPE(void*, _POINTER_TYPE, pointer, _TYPE_C_BUILTIN);
     _TYPE_REGISTER_TYPE_NODE(void*, _POINTER_TYPE);
@@ -312,9 +312,10 @@ void _type_register_cstl_builtin(void)
     /* register pair_t */
     _TYPE_REGISTER_TYPE(pair_t, _PAIR_TYPE, pair, _TYPE_CSTL_BUILTIN);
     _TYPE_REGISTER_TYPE_NODE(pair_t, _PAIR_TYPE);
-    /* register string_t */
+    /* register string_t 
     _TYPE_REGISTER_TYPE(string_t, _STRING_TYPE, string, _TYPE_CSTL_BUILTIN);
     _TYPE_REGISTER_TYPE_NODE(string_t, _STRING_TYPE);
+*/
     /* register range_t */
     _TYPE_REGISTER_TYPE(range_t, _RANGE_TYPE, range, _TYPE_CSTL_BUILTIN);
     _TYPE_REGISTER_TYPE_NODE(range_t, _RANGE_TYPE);

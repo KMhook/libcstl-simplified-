@@ -89,7 +89,7 @@ void _hashtable_iterator_get_value(_hashtable_iterator_t it_iter, void* pv_value
 
     /* char* */
     if (strncmp(_GET_HASHTABLE_TYPE_BASENAME(_HASHTABLE_ITERATOR_HASHTABLE(it_iter)), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
-        *(char**)pv_value = (char*)string_c_str((string_t*)((_hashnode_t*)_HASHTABLE_ITERATOR_COREPOS(it_iter))->_pby_data);
+        *(char**)pv_value = (char*)basic_string_c_str((basic_string_t*)((_hashnode_t*)_HASHTABLE_ITERATOR_COREPOS(it_iter))->_pby_data);
     } else {
         bool_t b_result = _GET_HASHTABLE_TYPE_SIZE(_HASHTABLE_ITERATOR_HASHTABLE(it_iter));
         _GET_HASHTABLE_TYPE_COPY_FUNCTION(_HASHTABLE_ITERATOR_HASHTABLE(it_iter))(
@@ -108,7 +108,7 @@ const void* _hashtable_iterator_get_pointer(_hashtable_iterator_t it_iter)
 
     /* char* */
     if (strncmp(_GET_HASHTABLE_TYPE_BASENAME(_HASHTABLE_ITERATOR_HASHTABLE(it_iter)), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
-        return (char*)string_c_str((string_t*)((_hashnode_t*)_HASHTABLE_ITERATOR_COREPOS(it_iter))->_pby_data);
+        return (char*)basic_string_c_str((basic_string_t*)((_hashnode_t*)_HASHTABLE_ITERATOR_COREPOS(it_iter))->_pby_data);
     } else {
         return ((_hashnode_t*)_HASHTABLE_ITERATOR_COREPOS(it_iter))->_pby_data;
     }

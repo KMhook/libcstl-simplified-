@@ -269,7 +269,7 @@ void* _hash_map_at_varg(hash_map_t* phmap_map, va_list val_elemlist)
 
     /* char* */
     if (strncmp(_GET_HASH_MAP_SECOND_TYPE_BASENAME(phmap_map), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
-        return (char*)string_c_str((string_t*)((pair_t*)iterator_get_pointer(it_iter))->_pv_second);
+        return (char*)basic_string_c_str((basic_string_t*)((pair_t*)iterator_get_pointer(it_iter))->_pv_second);
     } else {
         return ((pair_t*)iterator_get_pointer(it_iter))->_pv_second;
     }

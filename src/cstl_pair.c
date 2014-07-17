@@ -162,7 +162,7 @@ void* pair_first(const pair_t* cppair_pair)
 
     /* char* */
     if (strncmp(_GET_PAIR_FIRST_TYPE_BASENAME(cppair_pair), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
-        return (void*)string_c_str((string_t*)cppair_pair->_pv_first);
+        return (void*)basic_string_c_str((basic_string_t*)cppair_pair->_pv_first);
     } else {
         return cppair_pair->_pv_first;
     }
@@ -178,7 +178,7 @@ void* pair_second(const pair_t* cppair_pair)
 
     /* char* */
     if (strncmp(_GET_PAIR_SECOND_TYPE_BASENAME(cppair_pair), _C_STRING_TYPE, _TYPE_NAME_SIZE) == 0) {
-        return (void*)string_c_str((string_t*)cppair_pair->_pv_second);
+        return (void*)basic_string_c_str((basic_string_t*)cppair_pair->_pv_second);
     } else {
         return cppair_pair->_pv_second;
     }

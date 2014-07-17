@@ -944,14 +944,14 @@ void _hashtable_insert_equal_array(_hashtable_t* pt_hashtable, const void* cpv_a
         /*
          * We need built a string_t for c string element.
          */
-        string_t* pstr_elem = create_string();
+        basic_string_t* pstr_elem = create_basic_string("char");
         assert(pstr_elem != NULL);
-        string_init(pstr_elem);
+        basic_string_init(pstr_elem);
         for (i = 0; i < t_count; ++i) {
-            string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
+            basic_string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
             _hashtable_insert_equal(pt_hashtable, pstr_elem);
         }
-        string_destroy(pstr_elem);
+        basic_string_destroy(pstr_elem);
     } else if (_GET_HASHTABLE_TYPE_STYLE(pt_hashtable) == _TYPE_C_BUILTIN) {
         for (i = 0; i < t_count; ++i) {
             _hashtable_insert_equal(pt_hashtable, (unsigned char*)cpv_array + i * _GET_HASHTABLE_TYPE_SIZE(pt_hashtable));
@@ -1002,14 +1002,14 @@ void _hashtable_insert_unique_array(_hashtable_t* pt_hashtable, const void* cpv_
         /*
          * We need built a string_t for c string element.
          */
-        string_t* pstr_elem = create_string();
+        basic_string_t* pstr_elem = create_basic_string("char");
         assert(pstr_elem != NULL);
-        string_init(pstr_elem);
+        basic_string_init(pstr_elem);
         for (i = 0; i < t_count; ++i) {
-            string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
+            basic_string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
             _hashtable_insert_unique(pt_hashtable, pstr_elem);
         }
-        string_destroy(pstr_elem);
+        basic_string_destroy(pstr_elem);
     } else if (_GET_HASHTABLE_TYPE_STYLE(pt_hashtable) == _TYPE_C_BUILTIN) {
         for (i = 0; i < t_count; ++i) {
             _hashtable_insert_unique(pt_hashtable, (unsigned char*)cpv_array + i * _GET_HASHTABLE_TYPE_SIZE(pt_hashtable));

@@ -785,14 +785,14 @@ void _rb_tree_insert_equal_array(_rb_tree_t* pt_rb_tree, const void* cpv_array, 
         /*
          * We need built a string_t for c string element.
          */
-        string_t* pstr_elem = create_string();
+        basic_string_t* pstr_elem = create_basic_string("char");
         assert(pstr_elem != NULL);
-        string_init(pstr_elem);
+        basic_string_init(pstr_elem);
         for (i = 0; i < t_count; ++i) {
-            string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
+            basic_string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
             _rb_tree_insert_equal(pt_rb_tree, pstr_elem);
         }
-        string_destroy(pstr_elem);
+        basic_string_destroy(pstr_elem);
     } else if (_GET_RB_TREE_TYPE_STYLE(pt_rb_tree) == _TYPE_C_BUILTIN) {
         for (i = 0; i < t_count; ++i) {
             _rb_tree_insert_equal(pt_rb_tree, (unsigned char*)cpv_array + i * _GET_RB_TREE_TYPE_SIZE(pt_rb_tree));
@@ -843,14 +843,14 @@ void _rb_tree_insert_unique_array(_rb_tree_t* pt_rb_tree, const void* cpv_array,
         /*
          * We need built a string_t for c string element.
          */
-        string_t* pstr_elem = create_string();
+        basic_string_t* pstr_elem = create_basic_string("char");
         assert(pstr_elem != NULL);
-        string_init(pstr_elem);
+        basic_string_init(pstr_elem);
         for (i = 0; i < t_count; ++i) {
-            string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
+            basic_string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
             _rb_tree_insert_unique(pt_rb_tree, pstr_elem);
         }
-        string_destroy(pstr_elem);
+        basic_string_destroy(pstr_elem);
     } else if (_GET_RB_TREE_TYPE_STYLE(pt_rb_tree) == _TYPE_C_BUILTIN) {
         for (i = 0; i < t_count; ++i) {
             _rb_tree_insert_unique(pt_rb_tree, (unsigned char*)cpv_array + i * _GET_RB_TREE_TYPE_SIZE(pt_rb_tree));

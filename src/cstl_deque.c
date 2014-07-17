@@ -208,19 +208,19 @@ void deque_init_copy_array(deque_t* pdeq_dest, const void* cpv_array, size_t t_c
         /*
          * We need built a string_t for c string element.
          */
-        string_t* pstr_elem = create_string();
+        basic_string_t* pstr_elem = create_basic_string("char");
         assert(pstr_elem != NULL);
-        string_init(pstr_elem);
+        basic_string_init(pstr_elem);
         for (it_dest = it_begin, i = 0;
              !iterator_equal(it_dest, it_end) && i < t_count;
              it_dest = iterator_next(it_dest), ++i) {
-            string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
+            basic_string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
             b_result = _GET_DEQUE_TYPE_SIZE(pdeq_dest);
             _GET_DEQUE_TYPE_COPY_FUNCTION(pdeq_dest)(
                 _iterator_get_pointer_ignore_cstr(it_dest), pstr_elem, &b_result);
             assert(b_result);
         }
-        string_destroy(pstr_elem);
+        basic_string_destroy(pstr_elem);
     } else if (_GET_DEQUE_TYPE_STYLE(pdeq_dest) == _TYPE_C_BUILTIN) {
         for (it_dest = it_begin, i = 0;
              !iterator_equal(it_dest, it_end) && i < t_count;
@@ -441,20 +441,20 @@ void deque_assign_array(deque_t* pdeq_deque, const void* cpv_array, size_t t_cou
         /*
          * We need built a string_t for c string element.
          */
-        string_t* pstr_elem = create_string();
+        basic_string_t* pstr_elem = create_basic_string("char");
         assert(pstr_elem != NULL);
-        string_init(pstr_elem);
+        basic_string_init(pstr_elem);
 
         for (it_dest = it_begin, i = 0;
              !iterator_equal(it_dest, it_end) && i < t_count;
              it_dest = iterator_next(it_dest), ++i) {
-            string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
+            basic_string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
             b_result = _GET_DEQUE_TYPE_SIZE(pdeq_deque);
             _GET_DEQUE_TYPE_COPY_FUNCTION(pdeq_deque)(
                 _iterator_get_pointer_ignore_cstr(it_dest), pstr_elem, &b_result);
             assert(b_result);
         }
-        string_destroy(pstr_elem);
+        basic_string_destroy(pstr_elem);
     } else if (_GET_DEQUE_TYPE_STYLE(pdeq_deque) == _TYPE_C_BUILTIN) {
         for (it_dest = it_begin, i = 0;
              !iterator_equal(it_dest, it_end) && i < t_count;
@@ -779,17 +779,17 @@ void deque_insert_array(deque_t* pdeq_deque, deque_iterator_t it_pos, const void
             /*
              * We need built a string_t for c string element.
              */
-            string_t* pstr_elem = create_string();
+            basic_string_t* pstr_elem = create_basic_string("char");
             assert(pstr_elem != NULL);
-            string_init(pstr_elem);
+            basic_string_init(pstr_elem);
             for (i = 0; !iterator_equal(it_gap, it_pos) && i < t_count; it_gap = iterator_next(it_gap), ++i) {
-                string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
+                basic_string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
                 b_result = _GET_DEQUE_TYPE_SIZE(pdeq_deque);
                 _GET_DEQUE_TYPE_COPY_FUNCTION(pdeq_deque)(
                     _iterator_get_pointer_ignore_cstr(it_gap), pstr_elem, &b_result);
                 assert(b_result);
             }
-            string_destroy(pstr_elem);
+            basic_string_destroy(pstr_elem);
         } else if (_GET_DEQUE_TYPE_STYLE(pdeq_deque) == _TYPE_C_BUILTIN) {
             for (i = 0; !iterator_equal(it_gap, it_pos) && i < t_count; it_gap = iterator_next(it_gap), ++i) {
                 b_result = _GET_DEQUE_TYPE_SIZE(pdeq_deque);
@@ -822,17 +822,17 @@ void deque_insert_array(deque_t* pdeq_deque, deque_iterator_t it_pos, const void
             /*
              * We need built a string_t for c string element.
              */
-            string_t* pstr_elem = create_string();
+            basic_string_t* pstr_elem = create_basic_string("char");
             assert(pstr_elem != NULL);
-            string_init(pstr_elem);
+            basic_string_init(pstr_elem);
             for (i = 0; i < t_count; it_pos = iterator_next(it_pos), ++i) {
-                string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
+                basic_string_assign_cstr(pstr_elem, *((const char**)cpv_array + i));
                 b_result = _GET_DEQUE_TYPE_SIZE(pdeq_deque);
                 _GET_DEQUE_TYPE_COPY_FUNCTION(pdeq_deque)(
                     _iterator_get_pointer_ignore_cstr(it_pos), pstr_elem, &b_result);
                 assert(b_result);
             }
-            string_destroy(pstr_elem);
+            basic_string_destroy(pstr_elem);
         } else if (_GET_DEQUE_TYPE_STYLE(pdeq_deque) == _TYPE_C_BUILTIN) {
             for (i = 0; i < t_count; it_pos = iterator_next(it_pos), ++i) {
                 b_result = _GET_DEQUE_TYPE_SIZE(pdeq_deque);

@@ -65,7 +65,6 @@ void string_init_subcstr(string_t* pstr_string, const char* s_cstr, size_t t_cou
 {
     basic_string_init_subcstr(pstr_string, s_cstr, t_count);
 }
-
 /**
  * Initialize string with specified character.
  */
@@ -73,7 +72,6 @@ void string_init_char(string_t* pstr_string, size_t t_count, char c_char)
 {
     basic_string_init_elem(pstr_string, t_count, c_char);
 }
-
 /**
  * Initialize string container with an exist string container.
  */
@@ -81,7 +79,6 @@ void string_init_copy(string_t* pstr_dest, const string_t* cpstr_src)
 {
     basic_string_init_copy(pstr_dest, cpstr_src);
 }
-
 /**
  * Initialize string container with an exist sub string container.
  */
@@ -90,7 +87,6 @@ void string_init_copy_substring(string_t* pstr_dest, const string_t* cpstr_src, 
     basic_string_init_copy_substring(pstr_dest, cpstr_src, t_pos, t_len);
 }
 
-
 /**
  * Initialize string container with an exist string range.
  */
@@ -98,7 +94,6 @@ void string_init_copy_range(string_t* pstr_string, string_iterator_t it_begin, s
 {
     basic_string_init_copy_range(pstr_string, it_begin, it_end);
 }
-
 /**
  * Destroy string container.
  */
@@ -106,7 +101,6 @@ void string_destroy(string_t* pstr_string)
 {
     basic_string_destroy(pstr_string);
 }
-
 /**
  * Get character string.
  */
@@ -114,7 +108,6 @@ const char* string_c_str(const string_t* cpstr_string)
 {
     return basic_string_c_str(cpstr_string);
 }
-
 /**
  * Get character string.
  */
@@ -122,7 +115,6 @@ const char* string_data(const string_t* cpstr_string)
 {
     return basic_string_data(cpstr_string);
 }
-
 /**
  * Copy spceificed sub string to buffer.
  */
@@ -130,7 +122,6 @@ size_t string_copy(const string_t* cpstr_string, char* s_buffer, size_t t_len, s
 {
     return basic_string_copy(cpstr_string, s_buffer, t_len, t_pos);
 }
-
 /**
  * Get string character size.
  */
@@ -138,7 +129,6 @@ size_t string_size(const string_t* cpstr_string)
 {
     return basic_string_size(cpstr_string);
 }
-
 /**
  * Get character string length.
  */
@@ -146,7 +136,6 @@ size_t string_length(const string_t* cpstr_string)
 {
     return basic_string_length(cpstr_string);
 }
-
 /**
  * Return maximum character number.
  */
@@ -154,7 +143,6 @@ size_t string_max_size(const string_t* cpstr_string)
 {
     return basic_string_max_size(cpstr_string);
 }
-
 /**
  * Get string capacity.
  */
@@ -162,7 +150,6 @@ size_t string_capacity(const string_t* cpstr_string)
 {
     return basic_string_capacity(cpstr_string);
 }
-
 /**
  * Test string is empty.
  */
