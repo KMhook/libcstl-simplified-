@@ -124,7 +124,7 @@ extern "C" {
 
 /** data type declaration and struct, union, enum section **/
 
-/*
+/* 
  * Type definition of unary function and binary function.
  * Note: The last parameter is for output
  */
@@ -133,19 +133,19 @@ typedef void (*binary_function_t)(const void*, const void*, void*);
 typedef unary_function_t  ufun_t;
 typedef binary_function_t bfun_t;
 
-/* 
+/*  
  * Type register hash table.
  */
 /* type structure for all container. */
 #define _TYPE_NAME_SIZE              255
 /* type style */
 typedef enum _tagtypestley
-{
+{ 
     _TYPE_INVALID = 0, _TYPE_C_BUILTIN, _TYPE_USER_DEFINE, _TYPE_CSTL_BUILTIN
 }_typestyle_t;
 
 typedef struct _tagtype
-{
+{ 
     size_t               _t_typesize;                        /* type size */
     char                 _s_typename[_TYPE_NAME_SIZE + 1];   /* type name */
     _typestyle_t         _t_style;                           /* type style */

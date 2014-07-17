@@ -68,14 +68,7 @@ am__base_list = \
 am__installdirs = "$(DESTDIR)$(libdir)"
 LTLIBRARIES = $(lib_LTLIBRARIES)
 libcstl_la_LIBADD =
-am_libcstl_la_OBJECTS = libcstl_la-cstl_algo_nonmutating.lo \
-	libcstl_la-cstl_algo_nonmutating_private.lo \
-	libcstl_la-cstl_algo_mutating.lo \
-	libcstl_la-cstl_algo_mutating_private.lo \
-	libcstl_la-cstl_algo_mutating_aux.lo \
-	libcstl_la-cstl_algo_sorting.lo \
-	libcstl_la-cstl_algo_sorting_private.lo \
-	libcstl_la-cstl_algo_sorting_aux.lo libcstl_la-cstl_alloc.lo \
+am_libcstl_la_OBJECTS = libcstl_la-cstl_alloc.lo \
 	libcstl_la-cstl_alloc_aux.lo libcstl_la-cstl_avl_tree.lo \
 	libcstl_la-cstl_avl_tree_iterator.lo \
 	libcstl_la-cstl_avl_tree_private.lo \
@@ -259,9 +252,6 @@ top_srcdir = ..
 # for build libcstl.la
 lib_LTLIBRARIES = libcstl.la
 libcstl_la_SOURCES = \
-             cstl_algo_nonmutating.c cstl_algo_nonmutating_private.c \
-             cstl_algo_mutating.c cstl_algo_mutating_private.c cstl_algo_mutating_aux.c cstl_algo_mutating_aux.h \
-             cstl_algo_sorting.c cstl_algo_sorting_private.c cstl_algo_sorting_aux.c cstl_algo_sorting_aux.h \
              cstl_alloc.c cstl_alloc_aux.c cstl_alloc_aux.h \
              cstl_avl_tree.c cstl_avl_tree_iterator.c cstl_avl_tree_private.c cstl_avl_tree_aux.c cstl_avl_tree_aux.h \
              cstl_basic_string.c cstl_basic_string_iterator.c cstl_basic_string_private.c \
@@ -362,14 +352,6 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/libcstl_la-cstl_algo_mutating.Plo
-include ./$(DEPDIR)/libcstl_la-cstl_algo_mutating_aux.Plo
-include ./$(DEPDIR)/libcstl_la-cstl_algo_mutating_private.Plo
-include ./$(DEPDIR)/libcstl_la-cstl_algo_nonmutating.Plo
-include ./$(DEPDIR)/libcstl_la-cstl_algo_nonmutating_private.Plo
-include ./$(DEPDIR)/libcstl_la-cstl_algo_sorting.Plo
-include ./$(DEPDIR)/libcstl_la-cstl_algo_sorting_aux.Plo
-include ./$(DEPDIR)/libcstl_la-cstl_algo_sorting_private.Plo
 include ./$(DEPDIR)/libcstl_la-cstl_alloc.Plo
 include ./$(DEPDIR)/libcstl_la-cstl_alloc_aux.Plo
 include ./$(DEPDIR)/libcstl_la-cstl_avl_tree.Plo
@@ -461,61 +443,6 @@ include ./$(DEPDIR)/libcstl_la-cstl_vector_private.Plo
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
 #	$(LTCOMPILE) -c -o $@ $<
 
-libcstl_la-cstl_algo_nonmutating.lo: cstl_algo_nonmutating.c
-	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_algo_nonmutating.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_algo_nonmutating.Tpo -c -o libcstl_la-cstl_algo_nonmutating.lo `test -f 'cstl_algo_nonmutating.c' || echo '$(srcdir)/'`cstl_algo_nonmutating.c
-	$(am__mv) $(DEPDIR)/libcstl_la-cstl_algo_nonmutating.Tpo $(DEPDIR)/libcstl_la-cstl_algo_nonmutating.Plo
-#	source='cstl_algo_nonmutating.c' object='libcstl_la-cstl_algo_nonmutating.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_algo_nonmutating.lo `test -f 'cstl_algo_nonmutating.c' || echo '$(srcdir)/'`cstl_algo_nonmutating.c
-
-libcstl_la-cstl_algo_nonmutating_private.lo: cstl_algo_nonmutating_private.c
-	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_algo_nonmutating_private.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_algo_nonmutating_private.Tpo -c -o libcstl_la-cstl_algo_nonmutating_private.lo `test -f 'cstl_algo_nonmutating_private.c' || echo '$(srcdir)/'`cstl_algo_nonmutating_private.c
-	$(am__mv) $(DEPDIR)/libcstl_la-cstl_algo_nonmutating_private.Tpo $(DEPDIR)/libcstl_la-cstl_algo_nonmutating_private.Plo
-#	source='cstl_algo_nonmutating_private.c' object='libcstl_la-cstl_algo_nonmutating_private.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_algo_nonmutating_private.lo `test -f 'cstl_algo_nonmutating_private.c' || echo '$(srcdir)/'`cstl_algo_nonmutating_private.c
-
-libcstl_la-cstl_algo_mutating.lo: cstl_algo_mutating.c
-	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_algo_mutating.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_algo_mutating.Tpo -c -o libcstl_la-cstl_algo_mutating.lo `test -f 'cstl_algo_mutating.c' || echo '$(srcdir)/'`cstl_algo_mutating.c
-	$(am__mv) $(DEPDIR)/libcstl_la-cstl_algo_mutating.Tpo $(DEPDIR)/libcstl_la-cstl_algo_mutating.Plo
-#	source='cstl_algo_mutating.c' object='libcstl_la-cstl_algo_mutating.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_algo_mutating.lo `test -f 'cstl_algo_mutating.c' || echo '$(srcdir)/'`cstl_algo_mutating.c
-
-libcstl_la-cstl_algo_mutating_private.lo: cstl_algo_mutating_private.c
-	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_algo_mutating_private.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_algo_mutating_private.Tpo -c -o libcstl_la-cstl_algo_mutating_private.lo `test -f 'cstl_algo_mutating_private.c' || echo '$(srcdir)/'`cstl_algo_mutating_private.c
-	$(am__mv) $(DEPDIR)/libcstl_la-cstl_algo_mutating_private.Tpo $(DEPDIR)/libcstl_la-cstl_algo_mutating_private.Plo
-#	source='cstl_algo_mutating_private.c' object='libcstl_la-cstl_algo_mutating_private.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_algo_mutating_private.lo `test -f 'cstl_algo_mutating_private.c' || echo '$(srcdir)/'`cstl_algo_mutating_private.c
-
-libcstl_la-cstl_algo_mutating_aux.lo: cstl_algo_mutating_aux.c
-	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_algo_mutating_aux.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_algo_mutating_aux.Tpo -c -o libcstl_la-cstl_algo_mutating_aux.lo `test -f 'cstl_algo_mutating_aux.c' || echo '$(srcdir)/'`cstl_algo_mutating_aux.c
-	$(am__mv) $(DEPDIR)/libcstl_la-cstl_algo_mutating_aux.Tpo $(DEPDIR)/libcstl_la-cstl_algo_mutating_aux.Plo
-#	source='cstl_algo_mutating_aux.c' object='libcstl_la-cstl_algo_mutating_aux.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_algo_mutating_aux.lo `test -f 'cstl_algo_mutating_aux.c' || echo '$(srcdir)/'`cstl_algo_mutating_aux.c
-
-libcstl_la-cstl_algo_sorting.lo: cstl_algo_sorting.c
-	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_algo_sorting.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_algo_sorting.Tpo -c -o libcstl_la-cstl_algo_sorting.lo `test -f 'cstl_algo_sorting.c' || echo '$(srcdir)/'`cstl_algo_sorting.c
-	$(am__mv) $(DEPDIR)/libcstl_la-cstl_algo_sorting.Tpo $(DEPDIR)/libcstl_la-cstl_algo_sorting.Plo
-#	source='cstl_algo_sorting.c' object='libcstl_la-cstl_algo_sorting.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_algo_sorting.lo `test -f 'cstl_algo_sorting.c' || echo '$(srcdir)/'`cstl_algo_sorting.c
-
-libcstl_la-cstl_algo_sorting_private.lo: cstl_algo_sorting_private.c
-	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_algo_sorting_private.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_algo_sorting_private.Tpo -c -o libcstl_la-cstl_algo_sorting_private.lo `test -f 'cstl_algo_sorting_private.c' || echo '$(srcdir)/'`cstl_algo_sorting_private.c
-	$(am__mv) $(DEPDIR)/libcstl_la-cstl_algo_sorting_private.Tpo $(DEPDIR)/libcstl_la-cstl_algo_sorting_private.Plo
-#	source='cstl_algo_sorting_private.c' object='libcstl_la-cstl_algo_sorting_private.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_algo_sorting_private.lo `test -f 'cstl_algo_sorting_private.c' || echo '$(srcdir)/'`cstl_algo_sorting_private.c
-
-libcstl_la-cstl_algo_sorting_aux.lo: cstl_algo_sorting_aux.c
-	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_algo_sorting_aux.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_algo_sorting_aux.Tpo -c -o libcstl_la-cstl_algo_sorting_aux.lo `test -f 'cstl_algo_sorting_aux.c' || echo '$(srcdir)/'`cstl_algo_sorting_aux.c
-	$(am__mv) $(DEPDIR)/libcstl_la-cstl_algo_sorting_aux.Tpo $(DEPDIR)/libcstl_la-cstl_algo_sorting_aux.Plo
-#	source='cstl_algo_sorting_aux.c' object='libcstl_la-cstl_algo_sorting_aux.lo' libtool=yes \
-#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
-#	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libcstl_la-cstl_algo_sorting_aux.lo `test -f 'cstl_algo_sorting_aux.c' || echo '$(srcdir)/'`cstl_algo_sorting_aux.c
 
 libcstl_la-cstl_alloc.lo: cstl_alloc.c
 	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libcstl_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libcstl_la-cstl_alloc.lo -MD -MP -MF $(DEPDIR)/libcstl_la-cstl_alloc.Tpo -c -o libcstl_la-cstl_alloc.lo `test -f 'cstl_alloc.c' || echo '$(srcdir)/'`cstl_alloc.c

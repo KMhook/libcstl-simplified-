@@ -42,10 +42,11 @@ extern "C" {
 #include <cstl/cstl_hash_set_iterator.h>
 #include <cstl/cstl_hash_set_private.h>
 #include <cstl/cstl_hash_set.h>
+	/*  
 #include <cstl/cstl_hash_multiset_iterator.h>
 #include <cstl/cstl_hash_multiset_private.h>
 #include <cstl/cstl_hash_multiset.h>
-
+*/
 /** constant declaration and macro section **/
 
 /** data type declaration and struct, union, enum section **/

@@ -187,7 +187,6 @@ top_srcdir = @top_srcdir@
 # for build libcstl.a
 cstlincludedir = $(includedir)/cstl
 cstlinclude_HEADERS = \
-            calgorithm.h \
             cdeque.h \
             cfunctional.h \
             chash_map.h \
@@ -199,12 +198,6 @@ cstlinclude_HEADERS = \
             cqueue.h \
             cset.h \
             cstack.h \
-            cstl_algo_nonmutating.h \
-            cstl_algo_nonmutating_private.h \
-            cstl_algo_mutating.h \
-            cstl_algo_mutating_private.h \
-            cstl_algo_sorting.h \
-            cstl_algo_sorting_private.h \
             cstl_alloc.h \
             cstl_avl_tree.h \
             cstl_avl_tree_iterator.h \

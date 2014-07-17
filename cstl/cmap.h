@@ -44,10 +44,11 @@ extern "C" {
 #include <cstl/cstl_map_iterator.h>
 #include <cstl/cstl_map_private.h>
 #include <cstl/cstl_map.h>
+	/*  
 #include <cstl/cstl_multimap_iterator.h>
 #include <cstl/cstl_multimap_private.h>
 #include <cstl/cstl_multimap.h>
-
+*/
 /** constant declaration and macro section **/
 
 /** data type declaration and struct, union, enum section **/

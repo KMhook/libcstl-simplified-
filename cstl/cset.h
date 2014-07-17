@@ -44,10 +44,12 @@ extern "C" {
 #include <cstl/cstl_set_iterator.h>
 #include <cstl/cstl_set_private.h>
 #include <cstl/cstl_set.h>
+	/*
 #include <cstl/cstl_multiset_iterator.h>
 #include <cstl/cstl_multiset_private.h>
 #include <cstl/cstl_multiset.h>
 
+*/
 /** constant declaration and macro section **/
 
 /** data type declaration and struct, union, enum section **/
