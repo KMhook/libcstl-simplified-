@@ -293,9 +293,10 @@ void _type_register_cstl_builtin(void)
     /* register queue_t */
     _TYPE_REGISTER_TYPE(queue_t, _QUEUE_TYPE, queue, _TYPE_CSTL_BUILTIN);
     _TYPE_REGISTER_TYPE_NODE(queue_t, _QUEUE_TYPE);
-    /* register priority_queue_t */
+    /* register priority_queue_t 
     _TYPE_REGISTER_TYPE(priority_queue_t, _PRIORITY_QUEUE_TYPE, priority_queue, _TYPE_CSTL_BUILTIN);
     _TYPE_REGISTER_TYPE_NODE(priority_queue_t, _PRIORITY_QUEUE_TYPE);
+*/
     /* register set_t */
     _TYPE_REGISTER_TYPE(set_t, _SET_TYPE, set, _TYPE_CSTL_BUILTIN);
     _TYPE_REGISTER_TYPE_NODE(set_t, _SET_TYPE);

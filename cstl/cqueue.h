@@ -34,8 +34,10 @@ extern "C" {
 
 #include <cstl/cstl_queue_private.h>
 #include <cstl/cstl_queue.h>
+	/*
 #include <cstl/cstl_priority_queue_private.h>
 #include <cstl/cstl_priority_queue.h>
+*/
 
 /** constant declaration and macro section **/
 

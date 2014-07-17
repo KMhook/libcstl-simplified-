@@ -624,7 +624,7 @@ void _type_destroy_queue(const void* cpv_input, void* pv_output)
     *(bool_t*)pv_output = true;
 }
 
-/* priority_queue_t */
+/* priority_queue_t 
 void _type_init_priority_queue(const void* cpv_input, void* pv_output)
 {
     bool_t b_result = false;
@@ -654,6 +654,7 @@ void _type_destroy_priority_queue(const void* cpv_input, void* pv_output)
     _priority_queue_destroy_auxiliary((priority_queue_t*)cpv_input);
     *(bool_t*)pv_output = true;
 }
+*/
 
 /* set_t */
 void _type_init_set(const void* cpv_input, void* pv_output)

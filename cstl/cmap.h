@@ -33,9 +33,11 @@ extern "C" {
 #include <cstl/cstl_types.h>
 #include <cstl/citerator.h>
 
+	/*  
 #include <cstl/cstl_avl_tree_iterator.h>
 #include <cstl/cstl_avl_tree_private.h>
 #include <cstl/cstl_avl_tree.h>
+*/
 #include <cstl/cstl_rb_tree_iterator.h>
 #include <cstl/cstl_rb_tree_private.h>
 #include <cstl/cstl_rb_tree.h>

@@ -84,7 +84,7 @@ extern "C" {
 #define _DEQUE_TYPE                     "deque_t"
 #define _STACK_TYPE                     "stack_t"
 #define _QUEUE_TYPE                     "queue_t"
-#define _PRIORITY_QUEUE_TYPE            "priority_queue_t"
+//#define _PRIORITY_QUEUE_TYPE            "priority_queue_t"
 #define _SET_TYPE                       "set_t"
 #define _MAP_TYPE                       "map_t"
 #define _HASH_SET_TYPE                  "hash_set_t"

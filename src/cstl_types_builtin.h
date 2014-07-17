@@ -148,11 +148,12 @@ extern void _type_init_queue(const void* cpv_input, void* pv_output);
 extern void _type_copy_queue(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_less_queue(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_destroy_queue(const void* cpv_input, void* pv_output);
-/* priority_queue_t */
+/* priority_queue_t 
 extern void _type_init_priority_queue(const void* cpv_input, void* pv_output);
 extern void _type_copy_priority_queue(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_less_priority_queue(const void* cpv_first, const void* cpv_second, void* pv_output);
 extern void _type_destroy_priority_queue(const void* cpv_input, void* pv_output);
+*/
 /* set_t */
 extern void _type_init_set(const void* cpv_input, void* pv_output);
 extern void _type_copy_set(const void* cpv_first, const void* cpv_second, void* pv_output);

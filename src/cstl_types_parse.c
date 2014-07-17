@@ -60,7 +60,7 @@
 #define _TOKEN_TEXT_DEQUE                          "deque_t"
 #define _TOKEN_TEXT_STACK                          "stack_t"
 #define _TOKEN_TEXT_QUEUE                          "queue_t"
-#define _TOKEN_TEXT_PRIORITY_QUEUE                 "priority_queue_t"
+//#define _TOKEN_TEXT_PRIORITY_QUEUE                 "priority_queue_t"
 #define _TOKEN_TEXT_SET                            "set_t"
 #define _TOKEN_TEXT_MAP                            "map_t"
 #define _TOKEN_TEXT_HASH_SET                       "hash_set_t"
@@ -133,7 +133,7 @@ static keytable_t _sgt_table[] = {
     {_TOKEN_KEY_DEQUE,                  _TOKEN_TEXT_DEQUE},
     {_TOKEN_KEY_STACK,                  _TOKEN_TEXT_STACK},
     {_TOKEN_KEY_QUEUE,                  _TOKEN_TEXT_QUEUE},
-    {_TOKEN_KEY_PRIORITY_QUEUE,         _TOKEN_TEXT_PRIORITY_QUEUE},
+//    {_TOKEN_KEY_PRIORITY_QUEUE,         _TOKEN_TEXT_PRIORITY_QUEUE},
     {_TOKEN_KEY_SET,                    _TOKEN_TEXT_SET},
     {_TOKEN_KEY_MAP,                    _TOKEN_TEXT_MAP},
     {_TOKEN_KEY_HASH_SET,               _TOKEN_TEXT_HASH_SET},
@@ -229,7 +229,7 @@ _typestyle_t _type_get_style(const char* s_typename, char* s_formalname)
         case _TOKEN_KEY_DEQUE:
         case _TOKEN_KEY_STACK:
         case _TOKEN_KEY_QUEUE:
-        case _TOKEN_KEY_PRIORITY_QUEUE:
+//        case _TOKEN_KEY_PRIORITY_QUEUE:
         case _TOKEN_KEY_SET:
         case _TOKEN_KEY_MAP:
         case _TOKEN_KEY_HASH_SET:
@@ -756,10 +756,12 @@ bool_t _type_parse_sequence_name(char* s_formalname)
             _TOKEN_MATCH(_TOKEN_TEXT_QUEUE, s_formalname);
             return true;
             break;
+						/*  
         case _TOKEN_KEY_PRIORITY_QUEUE:
             _TOKEN_MATCH(_TOKEN_TEXT_PRIORITY_QUEUE, s_formalname);
             return true;
             break;
+*/
         case _TOKEN_KEY_SET:
             _TOKEN_MATCH(_TOKEN_TEXT_SET, s_formalname);
             return true;
@@ -966,7 +968,7 @@ bool_t _type_parse_cstl_builtin(char* s_formalname)
         case _TOKEN_KEY_DEQUE:
         case _TOKEN_KEY_STACK:
         case _TOKEN_KEY_QUEUE:
-        case _TOKEN_KEY_PRIORITY_QUEUE:
+        //case _TOKEN_KEY_PRIORITY_QUEUE:
         case _TOKEN_KEY_SET:
         case _TOKEN_KEY_HASH_SET:
         case _TOKEN_KEY_BASIC_STRING:
@@ -1055,7 +1057,7 @@ bool_t _type_parse_type_descript(char* s_formalname)
         case _TOKEN_KEY_DEQUE:
         case _TOKEN_KEY_STACK:
         case _TOKEN_KEY_QUEUE:
-        case _TOKEN_KEY_PRIORITY_QUEUE:
+        //case _TOKEN_KEY_PRIORITY_QUEUE:
         case _TOKEN_KEY_SET:
         case _TOKEN_KEY_MAP:
         case _TOKEN_KEY_HASH_SET:

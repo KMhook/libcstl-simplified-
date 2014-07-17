@@ -220,7 +220,6 @@ cstlinclude_HEADERS = \
             cstl_hashtable.h \
             cstl_hashtable_iterator.h \
             cstl_hashtable_private.h \
-            cstl_heap.h \
             cstl_iterator.h \
             cstl_iterator_private.h \
             cstl_list.h \
@@ -233,8 +232,6 @@ cstlinclude_HEADERS = \
             cstl_numeric_private.h \
             cstl_pair.h \
             cstl_pair_private.h \
-            cstl_priority_queue.h \
-            cstl_priority_queue_private.h \
             cstl_queue.h \
             cstl_queue_private.h \
             cstl_rb_tree.h \
